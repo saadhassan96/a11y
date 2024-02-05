@@ -10,7 +10,7 @@ last_name: Dane
 superuser: true
 
 # Role/position
-# role: Google
+role: Senior Developer Relations Engineer at Google
 
 # Organizations/Affiliations
 # organizations:
