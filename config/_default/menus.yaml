@@ -8,17 +8,17 @@ main:
   #   url: tour
   #   weight: 10
   - name: People
-    url: post
+    url: people
     weight: 20
   - name: Publications
-    url: people
-    weight: 30
-  - name: News
-    url: event
-    weight: 40
-  - name: Events
     url: publication
-    weight: 50
+    weight: 30
+  # - name: News
+  #   url: post
+  #   weight: 40
+  # - name: Events
+  #   url: event
+  #   weight: 50
   - name: Contact
     url: contact
     weight: 60

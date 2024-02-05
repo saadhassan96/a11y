@@ -8,53 +8,53 @@ sections:
   - block: hero
     content:
       title: |
-        NOLA HCI
+        NOLA a11y
         Research Group
       image:
         filename: welcome.jpg
       text: |
         <br>
         
-        The **NOLA Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        In our laboratory, we focus on advancing accessibility, human-computer interaction, and computational social science. Our research is centered on developing interactive systems tailored to the needs of Deaf and Hard of Hearing individuals, understanding the impact of linguistic systems on people with disabilities, and promoting art engagement for performance artists, especially those with disabilities.
   
-  - block: collection
-    content:
-      title: Latest News
-      subtitle:
-      text:
-      count: 5
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-      offset: 0
-      order: desc
-      page_type: post
-    design:
-      view: card
-      columns: '1'
+  # - block: collection
+  #   content:
+  #     title: Latest News
+  #     subtitle:
+  #     text:
+  #     count: 5
+  #     filters:
+  #       author: ''
+  #       category: ''
+  #       exclude_featured: false
+  #       publication_type: ''
+  #       tag: ''
+  #     offset: 0
+  #     order: desc
+  #     page_type: post
+  #   design:
+  #     view: card
+  #     columns: '1'
   
-  - block: markdown
-    content:
-      title:
-      subtitle: ''
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
-          filename: coders.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
-      spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
+  # - block: markdown
+  #   content:
+  #     title:
+  #     subtitle: ''
+  #     text:
+  #   design:
+  #     columns: '1'
+  #     background:
+  #       image: 
+  #         filename: coders.jpg
+  #         filters:
+  #           brightness: 1
+  #         parallax: false
+  #         position: center
+  #         size: cover
+  #         text_color_light: true
+  #     spacing:
+  #       padding: ['20px', '0', '20px', '0']
+  #     css_class: fullscreen
   
   - block: markdown
     content:

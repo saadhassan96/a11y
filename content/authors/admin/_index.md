@@ -1,41 +1,38 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Saad Hassan
 
 # Full Name (for SEO)
-first_name: Nelson
-last_name: Bighetti
+first_name: Saad
+last_name: Hassan
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Assistant Professor
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
-    url: ''
+  - name: Tulane University
+    url: 'https://tulane.edu/'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include human-computer interaction (HCI), accessibility, and computational social science.
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Human-Computer Interaction
+  - Accessibility
+  - Computational Social Science
 
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: PhD in Computing and Information Sciences
+      institution: Rochester Institute of Technology
+      year: 2023
+    - course: BSc in Computer Science
+      institution: Lahore Univeristy of Management Sciences
+      year: 2019
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -44,16 +41,19 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:test@example.org'
+    link: 'mailto:saadhassan@tulane.edu'
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/saadhassan1/
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
+    link: https://twitter.com/saadhassann
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+    link: https://scholar.google.com/citations?user=oy6dZIIAAAAJ&hl=en
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://github.com/saadhassan96
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -69,9 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Researchers
+  - Principal Investigators
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Saad Hassan obtained his PhD from the Golisano College of Computing and Information Sciences at the Rochester Institute of Technology in 2023. His research centers on Accessible Computing, Human-Computer Interaction (HCI), and Computational Social Science, with a focus on technologies to promote inclusion, facilitate learning, and encourage creative expression among individuals with disabilities. During his graduate studies, Saad worked as a research scientist intern at Google AI and Meta Reality Labs, where he helped develop and deploy innovative technologies. Saad's research has been featured in prestigious computing conferences and journals, including the ACM Conference on Human Factors in Computing Systems (CHI), the ACM SIGACCESS Conference on Computers and Accessibility (ASSETS), the ACM Transactions on Accessible Computing (TACCESS), and the Conference on Empirical Methods in Natural Language Processing (EMNLP). Currently, he serves as a program committee member for CHI and ASSETS.
