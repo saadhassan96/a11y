@@ -2,6 +2,11 @@
 title: "Designing and Evaluating an Advanced Dance Video Comprehension Tool with In-situ Move Identification Capabilities"
 authors:
 - admin
+- pataca
+- nourian
+- tigwell
+- davis
+- wagman
 date: "2024-05-10T00:00:00Z"
 doi: ""
 

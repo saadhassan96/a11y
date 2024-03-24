@@ -19,6 +19,7 @@ sections:
           - Administration
           - Collaborators
           - Visitors
+          - Co-authors
           - Alumni
       sort_by: Params.last_name
       sort_ascending: true

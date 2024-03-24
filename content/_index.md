@@ -8,8 +8,7 @@ sections:
   - block: hero
     content:
       title: |
-        NOLA a11y
-        Research Group
+        NOLA a11y Lab
       image:
         filename: welcome.jpg
       text: |

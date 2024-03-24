@@ -6,10 +6,10 @@ title: 'Kahaniyan - Designing for Acquisition of Urdu as a Second Language'
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - hasib
-  - asif
-  - khan
-  - shahid
+  # - hasib
+  # - asif
+  # - khan
+  # - shahid
 
 # Author notes (optional)
 author_notes:
