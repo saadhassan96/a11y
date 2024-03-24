@@ -16,6 +16,7 @@ sections:
           - PhD Students
           - Masters Students
           - Undergraduate Students
+          - Capstone Advisees
           - Administration
           - Collaborators
           - Visitors

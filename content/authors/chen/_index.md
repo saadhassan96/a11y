@@ -18,7 +18,7 @@ organizations:
     url: 'https://tulane.edu/'
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am set to begin my Master's in Computer Science, specializing in Machine Learning, at Tulane University in January 2024.
+# bio: 
 
 interests:
   - Machine Learning

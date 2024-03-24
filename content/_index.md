@@ -10,11 +10,11 @@ sections:
       title: |
         NOLA a11y Lab
       image:
-        filename: welcome.jpg
+        filename: cover.png
       text: |
         <br>
         
-        In our laboratory, we focus on advancing accessibility, human-computer interaction, and computational social science. Our research is centered on developing interactive systems tailored to the needs of Deaf and Hard of Hearing individuals, understanding the impact of linguistic systems on people with disabilities, and promoting art engagement for performance artists, especially those with disabilities.
+        In our lab, we focus on advancing accessibility (a11y), human-computer interaction (HCI), and computational social science (CSS) research. Our research is centered on developing interactive systems to facilitate inclusion, learning, and creative expression for individuals with disabilities.
   
   # - block: collection
   #   content:
