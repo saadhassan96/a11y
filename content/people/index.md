@@ -18,10 +18,11 @@ sections:
           - Undergraduate Students
           - Capstone Advisees
           - Administration
-          - Collaborators
           - Visitors
-          - Co-authors
           - Alumni
+          - Collaborators
+          - Co-authors
+
       sort_by: Params.last_name
       sort_ascending: true
     design:

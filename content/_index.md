@@ -14,7 +14,7 @@ sections:
       text: |
         <br>
         
-        In our lab, we focus on advancing accessibility (a11y), human-computer interaction (HCI), and computational social science (CSS) research. Our research is centered on developing interactive systems to facilitate inclusion, learning, and creative expression for individuals with disabilities.
+        We focus on advancing accessibility (a11y), human-computer interaction (HCI), and computational social science (CSS) research. Our research is centered on developing interactive systems to facilitate inclusion, learning, and creative expression for individuals with disabilities.
   
   # - block: collection
   #   content:

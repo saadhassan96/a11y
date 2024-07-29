@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Gabriel Sagrera
+title: Shayne Shelton
 
 # Full Name (for SEO)
-first_name: Gabriel
-last_name: Sagrera
+first_name: Shayne
+last_name: Shelton
 
 # Is this the primary user of the site?
 superuser: true
@@ -66,5 +66,6 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   # - Undergraduate Students
-  - Capstone Advisees
+  # - Capstone Advisees
+  - Alumni
 ---

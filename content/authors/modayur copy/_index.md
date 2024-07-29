@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Justin Haysbert
+title: Aaron Gershkovich
 
 # Full Name (for SEO)
-first_name: Justin
-last_name: Haysbert
+first_name: Aaron
+last_name: Gershkovich
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Capstone Project Advisee
+role: Student Researcher
 
 # Organizations/Affiliations
 organizations:
@@ -26,7 +26,7 @@ interests:
 
 education:
   courses:
-    - course: BS in Computer Science and Psychology
+    - course: BS in Computer Science and Finance
       institution: Tulane University
       year: 2024
 
@@ -34,13 +34,13 @@ education:
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
-social:
-  # - icon: envelope
-  #   icon_pack: fas
-  #   link: 'mailto:cchen30@tulane.edu'
-  # - icon: linkedin
-  #   icon_pack: fab
-  #   link: https://www.linkedin.com/in/caitlinpchen/
+# social:
+#   - icon: envelope
+#     icon_pack: fas
+#     link: 'mailto:cchen30@tulane.edu'
+#   - icon: linkedin
+#     icon_pack: fab
+#     link: https://www.linkedin.com/in/caitlinpchen/
   # - icon: twitter
   #   icon_pack: fab
   #   link: https://twitter.com/saadhassann
@@ -65,7 +65,5 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  # - Undergraduate Students
-  # - Capstone Advisees
-  - Alumni
+  - Undergraduate Students
 ---
