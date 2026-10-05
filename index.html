@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Libre+Caslon+Text:wght@400;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="css/lab.css?v=2026-10-08">
+  <link rel="stylesheet" href="css/lab.css?v=2026-10-09">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -195,7 +195,9 @@
     </section>
 
     <!-- ==================== PUBLICATIONS ====================
-         Newest first. Add class="pub highlight" to show a paper before
+         Newest first. Each paper is an <article class="pub">; the title links to the paper and
+         the links row lists its materials (PDF, ACM DL, Slides, Code, Video, Poster, BibTeX).
+         Add class="pub highlight" to show a paper before
          "Show all" is pressed. data-project ties a paper to a project
          filter: comm, info, or civic (leave it out if none). Lab members go in <b>. Venue chip format:
          "VENUE YEAR" or "VENUE YEAR · Type" (Demo, Poster, Journal...). -->
@@ -223,144 +225,263 @@
 
       <div id="pub-list" class="grid pubs">
         <!-- 2026 -->
-        <a aria-labelledby="pub1-t" aria-describedby="pub1-v pub1-a" class="pub highlight" data-project="comm" href="https://dl.acm.org/doi/10.1145/3772318.3791928">
+        <article class="pub highlight" data-project="comm">
           <div class="meta" id="pub1-v"><span class="chip">CHI 2026</span></div>
-          <h3 id="pub1-t">ASL Educators’ Perspectives on AI for Enhancing Student Learning in American Sign Language Education</h3>
+          <h3 id="pub1-t"><a href="https://dl.acm.org/doi/10.1145/3772318.3791928">ASL Educators’ Perspectives on AI for Enhancing Student Learning in American Sign Language Education</a></h3>
           <p class="authors" id="pub1-a"><b>Saad Hassan</b>, Laleh Nourian, Caluã de Lacerda Pataca, Michelle M. Olson, Toni D’Aurio, Kanupriya Agarwal, <b>Syeda Mah Noor Asad</b>, Garreth W. Tigwell, Matt Huenerfauth</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub2-t" aria-describedby="pub2-v pub2-a" class="pub highlight" data-project="comm" href="https://saadh.info/papers/kim-assets26/kim-assets26.pdf">
+          <p class="links">
+            <a href="https://saadh.info/papers/hassan-chi26/hassan-chi26.pdf" aria-describedby="pub1-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3772318.3791928" aria-describedby="pub1-t">ACM DL</a>
+            <a href="https://saadh.info/papers/hassan-chi26/slides.pdf" aria-describedby="pub1-t">Slides</a>
+            <a href="https://saadh.info/papers/hassan-chi26/hassan26.bib" aria-describedby="pub1-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub highlight" data-project="comm">
           <div class="meta" id="pub2-v"><span class="chip">ASSETS 2026</span></div>
-          <h3 id="pub2-t">Design and Evaluation of an AI-Based American Sign Language Video Comprehension Tool: Exploring the Benefits and Use of Automatic Segmentation and Sign Lookup</h3>
+          <h3 id="pub2-t"><a href="https://saadh.info/papers/kim-assets26/kim-assets26.pdf">Design and Evaluation of an AI-Based American Sign Language Video Comprehension Tool: Exploring the Benefits and Use of Automatic Segmentation and Sign Lookup</a></h3>
           <p class="authors" id="pub2-a"><b>Chaelin Kim</b>, Denise Crochet, Maty Bohacek, <b>Saad Hassan</b></p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub3-t" aria-describedby="pub3-v pub3-a" class="pub highlight" data-project="info" href="https://saadh.info/papers/hassan-assets26/hassan-assets26.pdf">
+          <p class="links">
+            <a href="https://saadh.info/papers/kim-assets26/kim-assets26.pdf" aria-describedby="pub2-t">Preprint</a>
+            <a href="https://github.com/chaelin0722/asl-video-lookup-tool" aria-describedby="pub2-t">Code</a>
+          </p>
+        </article>
+        <article class="pub highlight" data-project="info">
           <div class="meta" id="pub3-v"><span class="chip">ASSETS 2026</span></div>
-          <h3 id="pub3-t">A Scoping Review of Human–Computer Interaction Research on the Accessibility of Data Visualizations: New Technologies, Procedures, and Designs</h3>
+          <h3 id="pub3-t"><a href="https://saadh.info/papers/hassan-assets26/hassan-assets26.pdf">A Scoping Review of Human–Computer Interaction Research on the Accessibility of Data Visualizations: New Technologies, Procedures, and Designs</a></h3>
           <p class="authors" id="pub3-a"><b>Saad Hassan</b>, Areen Khalaila, Dylan Cashman, Ather Sharif, Rebecca Faust</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub4-t" aria-describedby="pub4-v pub4-a" class="pub" data-project="comm" href="https://saadh.info/papers/kim-assets26-2/kim-assets26-demo.pdf">
+          <p class="links">
+            <a href="https://saadh.info/papers/hassan-assets26/hassan-assets26.pdf" aria-describedby="pub3-t">Preprint</a>
+            <a href="https://accessvizcorpus.pages.dev/" aria-describedby="pub3-t">Corpus</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub4-v"><span class="chip">ASSETS 2026 · Demo</span></div>
-          <h3 id="pub4-t">Supporting Sign Language Video Comprehension through In-Situ Automatic Segmentation and Sign Lookup Tool</h3>
+          <h3 id="pub4-t"><a href="https://saadh.info/papers/kim-assets26-2/kim-assets26-demo.pdf">Supporting Sign Language Video Comprehension through In-Situ Automatic Segmentation and Sign Lookup Tool</a></h3>
           <p class="authors" id="pub4-a"><b>Chaelin Kim</b>, <b>Saad Hassan</b></p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub5-t" aria-describedby="pub5-v pub5-a" class="pub" data-project="civic" href="https://books.google.com/books/about/De_Gruyter_Handbook_of_Disruptive_Urban.html?id=xc8O0gEACAAJ">
+          <p class="links">
+            <a href="https://saadh.info/papers/kim-assets26-2/kim-assets26-demo.pdf" aria-describedby="pub4-t">Preprint</a>
+          </p>
+        </article>
+        <article class="pub" data-project="civic">
           <div class="meta" id="pub5-v"><span class="chip">De Gruyter 2026 · Book Chapter</span></div>
-          <h3 id="pub5-t">AI in the Public Sphere: Citizen Engagement and Governance</h3>
+          <h3 id="pub5-t"><a href="https://books.google.com/books/about/De_Gruyter_Handbook_of_Disruptive_Urban.html?id=xc8O0gEACAAJ">AI in the Public Sphere: Citizen Engagement and Governance</a></h3>
           <p class="authors" id="pub5-a"><b>Saad Hassan</b>, Motahhare Eslami, Nicholas Mattei, Aron Culotta, John Zimmerman</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub6-t" aria-describedby="pub6-v pub6-a" class="pub" data-project="info" href="https://www.sciencedirect.com/science/article/pii/S2666667726003879">
+          <p class="links">
+            <a href="https://books.google.com/books/about/De_Gruyter_Handbook_of_Disruptive_Urban.html?id=xc8O0gEACAAJ" aria-describedby="pub5-t">Publisher</a>
+          </p>
+        </article>
+        <article class="pub" data-project="info">
           <div class="meta" id="pub6-v"><span class="chip">AJPC 2026 · Commentary</span></div>
-          <h3 id="pub6-t">Reducing hypertension disparities: The potential role of patient-facing large language models</h3>
+          <h3 id="pub6-t"><a href="https://www.sciencedirect.com/science/article/pii/S2666667726003879">Reducing hypertension disparities: The potential role of patient-facing large language models</a></h3>
           <p class="authors" id="pub6-a">Farah Allouch, <b>Saad Hassan</b>, Flor Alvarado, <b>Syeda Mah Noor Asad</b>, Dee Parekh, Renata Johnson, Marilyn Payne, David Gardner, Nicholas Mattei, Keith C. Ferdinand</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
+          <p class="links">
+            <a href="https://saadh.info/papers/allouch-ajpc26/allouch-ajpc26.pdf" aria-describedby="pub6-t">PDF</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S2666667726003879" aria-describedby="pub6-t">ScienceDirect</a>
+            <a href="https://saadh.info/papers/allouch-ajpc26/allouch26.bib" aria-describedby="pub6-t">BibTeX</a>
+          </p>
+        </article>
 
         <!-- 2025 -->
-        <a aria-labelledby="pub7-t" aria-describedby="pub7-v pub7-a" class="pub highlight" data-project="info" href="https://dl.acm.org/doi/10.1145/3663547.3746355">
+        <article class="pub highlight" data-project="info">
           <div class="meta" id="pub7-v"><span class="chip">ASSETS 2025</span><span class="award">Best Paper Nominee</span></div>
-          <h3 id="pub7-t">A Review of 25 Years of Human-Computer Interaction Research on Reading Support Technologies for People with Disabilities Published in ACM</h3>
+          <h3 id="pub7-t"><a href="https://dl.acm.org/doi/10.1145/3663547.3746355">A Review of 25 Years of Human-Computer Interaction Research on Reading Support Technologies for People with Disabilities Published in ACM</a></h3>
           <p class="authors" id="pub7-a">Oliver Alonzo*, <b>Saad Hassan*</b></p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub8-t" aria-describedby="pub8-v pub8-a" class="pub" data-project="info" href="https://dl.acm.org/doi/10.1145/3663547.3759713">
+          <p class="links">
+            <a href="https://saadh.info/papers/alonzo-assets25/alonzo-assets25.pdf" aria-describedby="pub7-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3663547.3746355" aria-describedby="pub7-t">ACM DL</a>
+            <a href="https://saadh.info/papers/alonzo-assets25/slides.pdf" aria-describedby="pub7-t">Slides</a>
+            <a href="https://docs.google.com/spreadsheets/d/1EwSAnIALGsNkIgXWYrdVWguFnPjSEM2v2l5ieRWKtR4/edit?usp=sharing" aria-describedby="pub7-t">Corpus</a>
+            <a href="https://saadh.info/papers/alonzo-assets25/alonzo25.bib" aria-describedby="pub7-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="info">
           <div class="meta" id="pub8-v"><span class="chip">ASSETS 2025 · Demo</span></div>
-          <h3 id="pub8-t">A Customizable AI-Powered Automatic Text Simplification Tool for Supporting In-Situ Text Comprehension</h3>
+          <h3 id="pub8-t"><a href="https://dl.acm.org/doi/10.1145/3663547.3759713">A Customizable AI-Powered Automatic Text Simplification Tool for Supporting In-Situ Text Comprehension</a></h3>
           <p class="authors" id="pub8-a"><b>Nazmun Nahar Khanom</b>, <b>Aaron Gershkovich</b>, Oliver Alonzo, <b>Saad Hassan</b></p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub9-t" aria-describedby="pub9-v pub9-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3663547.3759746">
+          <p class="links">
+            <a href="https://saadh.info/papers/khanom-assets25/khanom-assets25.pdf" aria-describedby="pub8-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3663547.3759713" aria-describedby="pub8-t">ACM DL</a>
+            <a href="https://github.com/TITHI-KHAN/ATS-GPT" aria-describedby="pub8-t">Code</a>
+            <a href="https://saadh.info/papers/khanom-assets25/poster.pdf" aria-describedby="pub8-t">Poster</a>
+            <a href="https://saadh.info/papers/khanom-assets25/khanom25.bib" aria-describedby="pub8-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub9-v"><span class="chip">ASSETS 2025 · Demo</span></div>
-          <h3 id="pub9-t">Signing for Care: A Demo and Initial Evaluation of an American Sign Language Learning Tool for Emergency Medical Service Providers</h3>
+          <h3 id="pub9-t"><a href="https://dl.acm.org/doi/10.1145/3663547.3759746">Signing for Care: A Demo and Initial Evaluation of an American Sign Language Learning Tool for Emergency Medical Service Providers</a></h3>
           <p class="authors" id="pub9-a"><b>Chaelin Kim</b>, <b>Cameron McLaren</b>, <b>Madhangi Krishnan</b>, <b>Nikhil Modayur</b>, <b>Saad Hassan</b></p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub10-t" aria-describedby="pub10-v pub10-a" class="pub" href="https://dl.acm.org/doi/10.1145/3663547.3748639">
+          <p class="links">
+            <a href="https://saadh.info/papers/kim-assets25/kim-assets25.pdf" aria-describedby="pub9-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3663547.3759746" aria-describedby="pub9-t">ACM DL</a>
+            <a href="https://github.com/chaelin0722/ASL-emergency" aria-describedby="pub9-t">Code</a>
+            <a href="https://saadh.info/papers/kim-assets25/poster.pdf" aria-describedby="pub9-t">Poster</a>
+            <a href="https://saadh.info/papers/kim-assets25/kim25.bib" aria-describedby="pub9-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub">
           <div class="meta" id="pub10-v"><span class="chip">ASSETS 2025 · Workshop</span></div>
-          <h3 id="pub10-t">Participant Recruitment in Accessibility Research</h3>
+          <h3 id="pub10-t"><a href="https://dl.acm.org/doi/10.1145/3663547.3748639">Participant Recruitment in Accessibility Research</a></h3>
           <p class="authors" id="pub10-a">Lloyd May, <b>Saad Hassan</b>, Khang Dang, Sooyeon Lee, Oliver Alonzo</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub11-t" aria-describedby="pub11-v pub11-a" class="pub highlight" data-project="comm" href="https://openaccess.thecvf.com/content/CVPR2025/html/Georg_FSboard_Over_3_Million_Characters_of_ASL_Fingerspelling_Collected_via_CVPR_2025_paper.html">
+          <p class="links">
+            <a href="https://saadh.info/papers/may-assets25/may-assets25.pdf" aria-describedby="pub10-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3663547.3748639" aria-describedby="pub10-t">ACM DL</a>
+            <a href="https://docs.google.com/presentation/d/1KwvQdauKkiNEMZx5lLo_i0b1-VsL_U9LcFBjbFGVpiI/edit?usp=drivesdk" aria-describedby="pub10-t">Slides</a>
+            <a href="https://assets-recruitment-2025.github.io/" aria-describedby="pub10-t">Website</a>
+            <a href="https://saadh.info/papers/may-assets25/may25.bib" aria-describedby="pub10-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub highlight" data-project="comm">
           <div class="meta" id="pub11-v"><span class="chip">CVPR 2025</span></div>
-          <h3 id="pub11-t">FSboard: Over 3 Million Characters of ASL Fingerspelling Collected via Smartphones</h3>
+          <h3 id="pub11-t"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Georg_FSboard_Over_3_Million_Characters_of_ASL_Fingerspelling_Collected_via_CVPR_2025_paper.html">FSboard: Over 3 Million Characters of ASL Fingerspelling Collected via Smartphones</a></h3>
           <p class="authors" id="pub11-a">Manfred Georg, Garrett Tanzer, Esha Uboweja, <b>Saad Hassan</b>, Maximus Shengelia, Sam Sepah, Sean Forbes, Thad Starner</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub12-t" aria-describedby="pub12-v pub12-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3744257.3744258">
+          <p class="links">
+            <a href="https://saadh.info/papers/georg-cvpr25/georg-cvpr25.pdf" aria-describedby="pub11-t">PDF</a>
+            <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Georg_FSboard_Over_3_Million_Characters_of_ASL_Fingerspelling_Collected_via_CVPR_2025_paper.html" aria-describedby="pub11-t">CVF</a>
+            <a href="https://ieeexplore.ieee.org/document/11094022/" aria-describedby="pub11-t">IEEE Xplore</a>
+            <a href="https://www.youtube.com/watch?v=a8pEg6NPGvM" aria-describedby="pub11-t">Video</a>
+            <a href="https://cvpr.thecvf.com/media/PosterPDFs/CVPR%202025/33621.png?t=1748855109.234652" aria-describedby="pub11-t">Poster</a>
+            <a href="https://www.kaggle.com/datasets/googleai/fsboard" aria-describedby="pub11-t">Kaggle</a>
+            <a href="https://saadh.info/papers/georg-cvpr25/georg25.bib" aria-describedby="pub11-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub12-v"><span class="chip">W4A 2025</span></div>
-          <h3 id="pub12-t">Towards an AI-Driven Video-Based American Sign Language Dictionary: Exploring Design and Usage Experience with Learners</h3>
+          <h3 id="pub12-t"><a href="https://dl.acm.org/doi/10.1145/3744257.3744258">Towards an AI-Driven Video-Based American Sign Language Dictionary: Exploring Design and Usage Experience with Learners</a></h3>
           <p class="authors" id="pub12-a"><b>Saad Hassan</b>, Matyas Bohacek, <b>Chaelin Kim</b>, Denise Crochet</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub13-t" aria-describedby="pub13-v pub13-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3706598.3713304">
+          <p class="links">
+            <a href="https://saadh.info/papers/hassan-w4a25/hassan-w4a-25.pdf" aria-describedby="pub12-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3744257.3744258" aria-describedby="pub12-t">ACM DL</a>
+            <a href="https://saadh.info/papers/hassan-w4a25/hassan-w4a25-slides.pdf" aria-describedby="pub12-t">Slides</a>
+            <a href="https://github.com/maty-bohacek/sign-language-dictionary" aria-describedby="pub12-t">Code</a>
+            <a href="https://saadh.info/papers/hassan-w4a25/hassan25.bib" aria-describedby="pub12-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub13-v"><span class="chip">CHI 2025</span></div>
-          <h3 id="pub13-t">Tactile Emotions: Multimodal Affective Captioning with Haptics Improves Narrative Engagement for d/Deaf and Hard-of-Hearing Viewers</h3>
+          <h3 id="pub13-t"><a href="https://dl.acm.org/doi/10.1145/3706598.3713304">Tactile Emotions: Multimodal Affective Captioning with Haptics Improves Narrative Engagement for d/Deaf and Hard-of-Hearing Viewers</a></h3>
           <p class="authors" id="pub13-a">Caluã de Lacerda Pataca, <b>Saad Hassan</b>, Lloyd May, Michelle M. Olson, Toni D’Aurio, Roshan L. Peiris, Matt Huenerfauth</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
+          <p class="links">
+            <a href="https://saadh.info/papers/pataca-chi-25/pataca-chi25.pdf" aria-describedby="pub13-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3706598.3713304" aria-describedby="pub13-t">ACM DL</a>
+            <a href="https://saadh.info/papers/pataca-chi-25/pataca-chi25-slides-compressed.pdf" aria-describedby="pub13-t">Slides</a>
+            <a href="https://www.youtube.com/watch?v=Bz_qZBOHw5U" aria-describedby="pub13-t">Video</a>
+            <a href="https://saadh.info/papers/pataca-chi-25/pataca25.bib" aria-describedby="pub13-t">BibTeX</a>
+          </p>
+        </article>
 
         <!-- 2024 -->
-        <a aria-labelledby="pub14-t" aria-describedby="pub14-v pub14-a" class="pub highlight" data-project="comm" href="https://dl.acm.org/doi/10.1145/3613904.3642258">
+        <article class="pub highlight" data-project="comm">
           <div class="meta" id="pub14-v"><span class="chip">CHI 2024</span><span class="award">Honorable Mention</span></div>
-          <h3 id="pub14-t">Caption Royale: Exploring the Design Space of Affective Captions from the Perspective of Deaf and Hard-of-Hearing Individuals</h3>
+          <h3 id="pub14-t"><a href="https://dl.acm.org/doi/10.1145/3613904.3642258">Caption Royale: Exploring the Design Space of Affective Captions from the Perspective of Deaf and Hard-of-Hearing Individuals</a></h3>
           <p class="authors" id="pub14-a">Caluã de Lacerda Pataca, <b>Saad Hassan</b>, Nathan Tinker, Roshan Lalintha Peiris, Matt Huenerfauth</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub15-t" aria-describedby="pub15-v pub15-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3613904.3642710">
+          <p class="links">
+            <a href="https://saadh.info/papers/pataca-chi24/pataca-chi24.pdf" aria-describedby="pub14-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3613904.3642258" aria-describedby="pub14-t">ACM DL</a>
+            <a href="https://saadh.info/papers/pataca-chi24/slides.pdf" aria-describedby="pub14-t">Slides</a>
+            <a href="https://www.youtube.com/watch?v=zVfec86Oaf4&amp;amp;t=2s" aria-describedby="pub14-t">Video</a>
+            <a href="https://saadh.info/papers/pataca-chi24/pataca24.bib" aria-describedby="pub14-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub15-v"><span class="chip">CHI 2024</span><span class="award">Honorable Mention</span></div>
-          <h3 id="pub15-t">Designing and Evaluating an Advanced Dance Video Comprehension Tool with In-situ Move Identification Capabilities</h3>
+          <h3 id="pub15-t"><a href="https://dl.acm.org/doi/10.1145/3613904.3642710">Designing and Evaluating an Advanced Dance Video Comprehension Tool with In-situ Move Identification Capabilities</a></h3>
           <p class="authors" id="pub15-a"><b>Saad Hassan</b>, Caluã de Lacerda Pataca, Laleh Nourian, Garreth W. Tigwell, Briana Davis, <b>Will Zhenya Silver Wagman</b></p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub16-t" aria-describedby="pub16-v pub16-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3663548.3688504">
+          <p class="links">
+            <a href="https://saadh.info/papers/hassan-chi24/hassan-chi24.pdf" aria-describedby="pub15-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3613904.3642710" aria-describedby="pub15-t">ACM DL</a>
+            <a href="https://saadh.info/papers/hassan-chi24/slides.pdf" aria-describedby="pub15-t">Slides</a>
+            <a href="https://www.youtube.com/watch?v=etSQo4Aj6ow" aria-describedby="pub15-t">Video</a>
+            <a href="https://dl.acm.org/doi/10.1145/3613904.3642710#supplementary-materials" aria-describedby="pub15-t">Video Figure</a>
+            <a href="https://saadh.info/papers/hassan-chi24/hassan24.bib" aria-describedby="pub15-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub16-v"><span class="chip">ASSETS 2024 · Demo</span></div>
-          <h3 id="pub16-t">Towards a Rich Format for Closed-Captioning</h3>
+          <h3 id="pub16-t"><a href="https://dl.acm.org/doi/10.1145/3663548.3688504">Towards a Rich Format for Closed-Captioning</a></h3>
           <p class="authors" id="pub16-a">Lloyd May, Alex Williams, <b>Saad Hassan</b>, Mark Cartwright, Sooyeon Lee</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub17-t" aria-describedby="pub17-v pub17-a" class="pub" href="https://dl.acm.org/doi/10.1145/3663548.3688527">
+          <p class="links">
+            <a href="https://saadh.info/papers/may-assets24/may-assets24.pdf" aria-describedby="pub16-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3663548.3688504" aria-describedby="pub16-t">ACM DL</a>
+            <a href="https://www.youtube.com/watch?v=-E6I5rKPpOI" aria-describedby="pub16-t">Video Figure</a>
+            <a href="https://github.com/disjoylab/Rich-Caption-Editor" aria-describedby="pub16-t">Code</a>
+            <a href="https://redarmy34.github.io/RCE-WebGL-Page/" aria-describedby="pub16-t">Demo</a>
+            <a href="https://saadh.info/papers/may-assets24/may24.bib" aria-describedby="pub16-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub">
           <div class="meta" id="pub17-v"><span class="chip">ASSETS 2024 · Poster</span></div>
-          <h3 id="pub17-t">Exploring the “Freedom to be Me” through Design Sprints with Neurodivergent Scholars</h3>
+          <h3 id="pub17-t"><a href="https://dl.acm.org/doi/10.1145/3663548.3688527">Exploring the “Freedom to be Me” through Design Sprints with Neurodivergent Scholars</a></h3>
           <p class="authors" id="pub17-a">LouAnne Boyd, Annuska Zolyomi, <b>Saad Hassan</b>, Seray B. Ibrahim, Guande Wu, Kay Kender</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub18-t" aria-describedby="pub18-v pub18-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3690647">
+          <p class="links">
+            <a href="https://saadh.info/papers/boyd-assets24/boyd-assets24.pdf" aria-describedby="pub17-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3663548.3688527" aria-describedby="pub17-t">ACM DL</a>
+            <a href="https://saadh.info/papers/boyd-assets24/boyd-assets24-slides.pdf" aria-describedby="pub17-t">Poster</a>
+            <a href="https://saadh.info/papers/boyd-assets24/boyd24.bib" aria-describedby="pub17-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub18-v"><span class="chip">TACCESS 2024 · Journal</span></div>
-          <h3 id="pub18-t">Exploring the Benefits and Applications of Video-Span Selection and Search for Real-Time Support in Sign Language Video Comprehension among ASL Learners</h3>
+          <h3 id="pub18-t"><a href="https://dl.acm.org/doi/10.1145/3690647">Exploring the Benefits and Applications of Video-Span Selection and Search for Real-Time Support in Sign Language Video Comprehension among ASL Learners</a></h3>
           <p class="authors" id="pub18-a"><b>Saad Hassan</b>, Caluã de Lacerda Pataca, Akhter Al Amin, Laleh Nourian, Diego Navarro, Sooyeon Lee, Alexis Gordon, Matthew Watkins, Garreth W. Tigwell, Matt Huenerfauth</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub19-t" aria-describedby="pub19-v pub19-a" class="pub" data-project="civic" href="https://ojs.aaai.org/index.php/HCOMP/article/view/31610">
+          <p class="links">
+            <a href="https://saadh.info/papers/hassan-taccess-24/hassan-taccess-24.pdf" aria-describedby="pub18-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3690647" aria-describedby="pub18-t">ACM DL</a>
+            <a href="https://dl.acm.org/doi/10.1145/3690647#supplementary-materials" aria-describedby="pub18-t">Supplement</a>
+            <a href="https://saadh.info/papers/hassan-taccess-24/hassan24.bib" aria-describedby="pub18-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="civic">
           <div class="meta" id="pub19-v"><span class="chip">HCOMP 2024 · Workshop</span></div>
-          <h3 id="pub19-t">PACE: Participatory AI for Community Engagement</h3>
+          <h3 id="pub19-t"><a href="https://ojs.aaai.org/index.php/HCOMP/article/view/31610">PACE: Participatory AI for Community Engagement</a></h3>
           <p class="authors" id="pub19-a"><b>Saad Hassan</b>, <b>Syeda Mah Noor Asad</b>, Motahhare Eslami, Nicholas Mattei, Aron Culotta, John Zimmerman</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
+          <p class="links">
+            <a href="https://saadh.info/papers/hassan-hcomp24/hassan-hcomp24.pdf" aria-describedby="pub19-t">PDF</a>
+            <a href="https://ojs.aaai.org/index.php/HCOMP/article/view/31610" aria-describedby="pub19-t">AAAI</a>
+            <a href="https://docs.google.com/presentation/d/1AUEcC3LnJEFJCVE51VEpHMsLw0GYceF7ZD9GHZS2cVk/edit?usp=drivesdk" aria-describedby="pub19-t">Slides</a>
+            <a href="https://tulanecs.github.io/PACE/" aria-describedby="pub19-t">Website</a>
+            <a href="https://saadh.info/papers/hassan-hcomp24/hassan24.bib" aria-describedby="pub19-t">BibTeX</a>
+          </p>
+        </article>
 
         <!-- 2023 -->
-        <a aria-labelledby="pub20-t" aria-describedby="pub20-v pub20-a" class="pub" data-project="comm" href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/00dada608b8db212ea7d9d92b24c68de-Abstract-Datasets_and_Benchmarks.html">
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub20-v"><span class="chip">NeurIPS 2023 · Datasets</span></div>
-          <h3 id="pub20-t">PopSign ASL v1.0: An Isolated American Sign Language Dataset Collected via Smartphones</h3>
+          <h3 id="pub20-t"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/00dada608b8db212ea7d9d92b24c68de-Abstract-Datasets_and_Benchmarks.html">PopSign ASL v1.0: An Isolated American Sign Language Dataset Collected via Smartphones</a></h3>
           <p class="authors" id="pub20-a">Thad Starner, Sean Forbes, Matthew So, … <b>Saad Hassan</b>, … Garrett Tanzer</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub21-t" aria-describedby="pub21-v pub21-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3597638.3614497">
+          <p class="links">
+            <a href="https://saadh.info/papers/starner-neurips23/starner-neurips23.pdf" aria-describedby="pub20-t">PDF</a>
+            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/00dada608b8db212ea7d9d92b24c68de-Abstract-Datasets_and_Benchmarks.html" aria-describedby="pub20-t">NeurIPS</a>
+            <a href="https://neurips.cc/virtual/2023/poster/73414" aria-describedby="pub20-t">Presentation</a>
+            <a href="https://neurips.cc/media/PosterPDFs/NeurIPS%202023/73414.png?t=1702252482.7126098" aria-describedby="pub20-t">Poster</a>
+            <a href="https://github.com/matthew-so/Mobile-Data-Processing-Pipeline" aria-describedby="pub20-t">Code</a>
+            <a href="https://www.kaggle.com/competitions/asl-signs/data" aria-describedby="pub20-t">Kaggle</a>
+            <a href="https://signdata.cc.gatech.edu/view/datasets/popsign_v1_0/index.html#:~:text=Table_title%3A%20Dataset%20Snapshot%20Table_content%3A%20%7C%20Category%20%7C,of%20Video%20Quality%20Categories%20%7C%203%20%7C" aria-describedby="pub20-t">Data Card</a>
+            <a href="https://saadh.info/papers/starner-neurips23/starner23.bib" aria-describedby="pub20-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub21-v"><span class="chip">ASSETS 2023 · Demo</span></div>
-          <h3 id="pub21-t">Sign Spotter: Design and Initial Evaluation of an Automatic Video-Based American Sign Language Dictionary System</h3>
+          <h3 id="pub21-t"><a href="https://dl.acm.org/doi/10.1145/3597638.3614497">Sign Spotter: Design and Initial Evaluation of an Automatic Video-Based American Sign Language Dictionary System</a></h3>
           <p class="authors" id="pub21-a">Matyas Bohacek, <b>Saad Hassan</b></p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
-        <a aria-labelledby="pub22-t" aria-describedby="pub22-v pub22-a" class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3604274">
+          <p class="links">
+            <a href="https://saadh.info/papers/bohacek-assets-23/bohacek-assets23.pdf" aria-describedby="pub21-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3597638.3614497" aria-describedby="pub21-t">ACM DL</a>
+            <a href="https://docs.google.com/presentation/d/1UhX3Ap3oxwrLoa4rAqkLIbQ5XdsmJVEZ/edit?usp=sharing&amp;amp;ouid=108965496603216217412&amp;amp;rtpof=true&amp;amp;sd=true" aria-describedby="pub21-t">Slides</a>
+            <a href="https://saadh.info/papers/bohacek-assets-23/bohacek23.bib" aria-describedby="pub21-t">BibTeX</a>
+          </p>
+        </article>
+        <article class="pub" data-project="comm">
           <div class="meta" id="pub22-v"><span class="chip">MobileHCI 2023</span></div>
-          <h3 id="pub22-t">Tap to Sign: Towards using American Sign Language for Text Entry on Smartphones</h3>
+          <h3 id="pub22-t"><a href="https://dl.acm.org/doi/10.1145/3604274">Tap to Sign: Towards using American Sign Language for Text Entry on Smartphones</a></h3>
           <p class="authors" id="pub22-a"><b>Saad Hassan</b>, Abraham Glasser, Max Shengelia, Thad Starner, Sean Forbes, Nathan Qualls, Sam S. Sepah</p>
-          <span class="more" aria-hidden="true">View publication</span>
-        </a>
+          <p class="links">
+            <a href="https://saadh.info/papers/hassan-mobilehci23/hassan-mhci23.pdf" aria-describedby="pub22-t">PDF</a>
+            <a href="https://dl.acm.org/doi/10.1145/3604274" aria-describedby="pub22-t">ACM DL</a>
+            <a href="https://docs.google.com/presentation/d/1qPtowSdv61h5odrORvFZah2Q7W98ZIr5RTFdApKjWeU/edit?usp=sharing" aria-describedby="pub22-t">Slides</a>
+            <a href="https://www.youtube.com/watch?v=hyDtfJhe_aU" aria-describedby="pub22-t">Video</a>
+            <a href="https://saadh.info/papers/hassan-mobilehci23/hassan23.bib" aria-describedby="pub22-t">BibTeX</a>
+          </p>
+        </article>
       </div>
       <button id="pub-toggle" class="toggle" type="button" aria-expanded="false" aria-controls="pub-list" hidden>Show all publications</button>
     </section>
@@ -458,6 +579,6 @@
     </div>
   </footer>
 
-  <script src="js/lab.js?v=2026-10-08"></script>
+  <script src="js/lab.js?v=2026-10-09"></script>
 </body>
 </html>
