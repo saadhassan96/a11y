@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Libre+Caslon+Text:wght@400;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="css/lab.css?v=2026-10-11">
+  <link rel="stylesheet" href="css/lab.css?v=2026-10-12">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -78,8 +78,9 @@
     </section>
 
       <!-- ==================== ACCESS IN NEW ORLEANS ====================
-           Short notes on accessibility around the city, each with a link out.
-           Keep descriptions to one or two sentences. -->
+           Short notes on accessibility around the city, each with a small
+           line drawing on a sidewalk tile and a link out. Keep each note
+           to one short sentence. -->
       <aside class="access" aria-labelledby="access-title">
         <div class="access-head">
           <div class="sign small">
@@ -115,28 +116,85 @@
         </div>
         <ul class="access-list">
           <li>
-            <span class="chip">Music</span>
-            <h3 id="access-jazzfest">ASL at Jazz Fest</h3>
-            <p>Teams of ASL interpreters sign sets on several Jazz Fest stages, long coordinated by Tulane linguist Denise Crochet.</p>
-            <a class="read-more" href="https://news.tulane.edu/news/tulane-professor-helps-deaf-guests-feel-beat-jazz-fest" aria-describedby="access-jazzfest">Read more</a>
+            <svg class="access-art" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- A signing hand with music notes -->
+              <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 58 V46 C16 43 13 38 11.5 34 C10.5 31 13.5 29.5 15.5 32 L19 37 V19 C19 16.5 23 16.5 23 19 V31 V15 C23 12.5 27 12.5 27 15 V31 V17 C27 14.5 31 14.5 31 17 V32 V22 C31 19.5 34.5 19.5 34.5 22 V44 C34.5 50 32.5 54 31.5 58"/>
+                <path d="M38 12 C41 14 42 17 41 20"/>
+                <path d="M41 8 C46 11 47.5 16 46 21"/>
+                <path d="M49 30 V18 L58 15 V27"/>
+              </g>
+              <ellipse cx="46.5" cy="30.5" rx="3.2" ry="2.5" fill="currentColor"/>
+              <ellipse cx="55.5" cy="27.5" rx="3.2" ry="2.5" fill="currentColor"/>
+              <circle cx="44" cy="46" r="2" fill="#f0a032"/><circle cx="51" cy="42" r="1.5" fill="#f0a032"/><circle cx="55" cy="50" r="1.5" fill="#f0a032"/>
+            </svg>
+            <div>
+              <h3 id="access-jazzfest">ASL at Jazz Fest</h3>
+              <p>Interpreters sign sets across the festival’s stages.</p>
+              <a class="read-more" href="https://news.tulane.edu/news/tulane-professor-helps-deaf-guests-feel-beat-jazz-fest" aria-describedby="access-jazzfest">Read more</a>
+            </div>
           </li>
           <li>
-            <span class="chip">Transit</span>
-            <h3 id="access-streetcar">Streetcars with lifts</h3>
-            <p>Since 2020, cars with wheelchair lifts run on the historic St. Charles line, stopping at rebuilt platforms with tactile warning strips.</p>
-            <a class="read-more" href="https://www.fox8live.com/2020/12/01/new-ada-streetcars-enter-service-st-charles-avenue/" aria-describedby="access-streetcar">Read more</a>
+            <svg class="access-art" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- A streetcar with its wheelchair lift lowered at the door -->
+              <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 6 H62" stroke-width="1.6"/>
+                <path d="M42 19 L54 6"/>
+                <path d="M16 44 V22 Q38 14 60 22 V44 Z"/>
+                <path d="M17 26 H23 V44"/>
+                <path d="M27 25 H33 V33 H27 Z M37 25 H43 V33 H37 Z M47 25 H53 V33 H47 Z" fill="#f6c45a"/>
+                <path d="M2 56 H62" stroke-width="1.6"/>
+                <path d="M3 51 H15 M4 44 V51 M14 44 V51"/>
+              </g>
+              <circle cx="7.5" cy="40" r="2" fill="currentColor"/>
+              <path d="M7.5 42 V46 H11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="30" cy="50" r="3.5" fill="currentColor"/>
+              <circle cx="50" cy="50" r="3.5" fill="currentColor"/>
+            </svg>
+            <div>
+              <h3 id="access-streetcar">Streetcars with lifts</h3>
+              <p>Wheelchair lifts on the St. Charles line since 2020.</p>
+              <a class="read-more" href="https://www.fox8live.com/2020/12/01/new-ada-streetcars-enter-service-st-charles-avenue/" aria-describedby="access-streetcar">Read more</a>
+            </div>
           </li>
           <li>
-            <span class="chip">Streets</span>
-            <h3 id="access-streets">Curb ramps and crossings</h3>
-            <p>Residents can request curb ramps, sidewalk repairs, and accessible pedestrian signals through 311, and the City tracks them on a public dashboard.</p>
-            <a class="read-more" href="https://nola.gov/next/public-works/programs/accessibility-of-streets-and-sidewalks/" aria-describedby="access-streets">Read more</a>
+            <svg class="access-art" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- A curb ramp with warning domes, a push-button signal, and a crosswalk -->
+              <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 38 H22 L40 50 H62"/>
+                <path d="M2 44 H18" stroke-width="1.6"/>
+                <path d="M10 38 V6"/>
+                <rect x="12" y="8" width="18" height="20" rx="2.5"/>
+                <circle cx="21" cy="23" r="2.4"/>
+                <path d="M16 14.5 H25 M21.5 11 L25 14.5 L21.5 18"/>
+                <path d="M46 55 V61 M51 55 V61 M56 55 V61 M61 55 V61" stroke-width="2.6"/>
+              </g>
+              <circle cx="29" cy="45.5" r="1.8" fill="#f0a032"/><circle cx="33.2" cy="48.3" r="1.8" fill="#f0a032"/><circle cx="37.4" cy="51.1" r="1.8" fill="#f0a032"/>
+              <circle cx="31" cy="43" r="1.8" fill="#f0a032"/><circle cx="35.2" cy="45.8" r="1.8" fill="#f0a032"/>
+            </svg>
+            <div>
+              <h3 id="access-streets">Curb ramps and crossings</h3>
+              <p>Request ramps and accessible signals through 311.</p>
+              <a class="read-more" href="https://nola.gov/next/public-works/programs/accessibility-of-streets-and-sidewalks/" aria-describedby="access-streets">Read more</a>
+            </div>
           </li>
           <li>
-            <span class="chip">Carnival</span>
-            <h3 id="access-carnival">Parade viewing at Gallier Hall</h3>
-            <p>During Carnival, the City sets up an accessible grandstand across from Gallier Hall for people with disabilities.</p>
-            <a class="read-more" href="https://wwltv.com/article/entertainment/events/mardi-gras/gallier-hall-viewing-space-for-disabled-people/289-f878f007-4b7d-462b-adb3-8936e22f9159" aria-describedby="access-carnival">Read more</a>
+            <svg class="access-art" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- Gallier Hall's columns draped with beads -->
+              <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 20 L32 9 L54 20 Z"/>
+                <path d="M8 20 H56 V25 H8 Z"/>
+                <path d="M13 25 V47 M22 25 V47 M32 25 V47 M42 25 V47 M51 25 V47"/>
+                <path d="M8 47 H56 M5 52 H59 M2 57 H62"/>
+                <path d="M6 28 Q32 46 58 28" stroke="#f0a032" stroke-width="1.6"/>
+              </g>
+              <circle cx="15" cy="33.5" r="2" fill="#f0a032"/><circle cx="24" cy="36.5" r="2" fill="#f0a032"/><circle cx="32" cy="37.2" r="2.4" fill="#f0a032"/><circle cx="40" cy="36.5" r="2" fill="#f0a032"/><circle cx="49" cy="33.5" r="2" fill="#f0a032"/>
+            </svg>
+            <div>
+              <h3 id="access-carnival">Parades at Gallier Hall</h3>
+              <p>An accessible grandstand for Carnival parades.</p>
+              <a class="read-more" href="https://wwltv.com/article/entertainment/events/mardi-gras/gallier-hall-viewing-space-for-disabled-people/289-f878f007-4b7d-462b-adb3-8936e22f9159" aria-describedby="access-carnival">Read more</a>
+            </div>
           </li>
         </ul>
       </aside>

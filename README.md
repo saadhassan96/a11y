@@ -23,8 +23,9 @@ archive/          the previous Hugo site (2024 to October 2026), served at /arch
 - **Projects:** the "See N publications" link on each card counts papers by
   `data-project` and opens the Publications section with that filter applied.
 - **Access in New Orleans:** the panel beside the intro. Each `<li>` has a
-  tile chip, a title with an `id`, one or two sentences, and a "Read more" link
-  whose `aria-describedby` points to that title.
+  small line drawing (inline SVG on a sidewalk tile), a title with an `id`, one
+  short sentence, and a "Read more" link whose `aria-describedby` points to
+  that title.
 - **People:** copy a `.person` block and add a photo to `images/people/`.
   Move people who graduate to the Alumni lists.
 
