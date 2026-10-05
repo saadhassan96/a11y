@@ -1,7 +1,12 @@
-# IDEs
+# OS / IDE
+.DS_Store
 .idea/
 
-# Hugo
-/resources/
-public/
-assets/jsconfig.json
+# Local build output
+_site/
+
+# Hugo (archived site)
+archive/resources/
+archive/public/
+archive/.hugo_build.lock
+archive/assets/jsconfig.json
