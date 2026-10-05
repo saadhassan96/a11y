@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Libre+Caslon+Text:wght@400;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="css/lab.css?v=2026-10-13">
+  <link rel="stylesheet" href="css/lab.css?v=2026-10-14">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -81,7 +81,8 @@
            Short notes on accessibility around the city in two lists,
            Progress and Barriers, switched by the buttons at the top.
            Each note has a small line drawing on a sidewalk tile and a
-           link out. Keep each note to one short sentence. -->
+           link out. Keep each note to one short sentence. The date chip
+           is the date of the linked story (Mon YYYY), or "Ongoing". -->
       <aside class="access" aria-labelledby="access-title">
         <div class="access-head">
           <div class="sign small">
@@ -136,6 +137,7 @@
                 <circle cx="44" cy="46" r="2" fill="#f0a032"/><circle cx="51" cy="42" r="1.5" fill="#f0a032"/><circle cx="55" cy="50" r="1.5" fill="#f0a032"/>
               </svg>
               <div>
+                <span class="chip"><time datetime="2018-05">May 2018</time></span>
                 <h3 id="access-jazzfest">ASL at Jazz Fest</h3>
                 <p>Interpreters sign sets across the festival’s stages.</p>
                 <a class="read-more" href="https://news.tulane.edu/news/tulane-professor-helps-deaf-guests-feel-beat-jazz-fest" aria-describedby="access-jazzfest">Read more</a>
@@ -159,8 +161,9 @@
                 <circle cx="50" cy="50" r="3.5" fill="currentColor"/>
               </svg>
               <div>
+                <span class="chip"><time datetime="2020-12">Dec 2020</time></span>
                 <h3 id="access-streetcar">Streetcars with lifts</h3>
-                <p>Wheelchair lifts on the St. Charles line since 2020.</p>
+                <p>Wheelchair lifts on the historic St. Charles line.</p>
                 <a class="read-more" href="https://www.fox8live.com/2020/12/01/new-ada-streetcars-enter-service-st-charles-avenue/" aria-describedby="access-streetcar">Read more</a>
               </div>
             </li>
@@ -180,6 +183,7 @@
                 <circle cx="31" cy="43" r="1.8" fill="#f0a032"/><circle cx="35.2" cy="45.8" r="1.8" fill="#f0a032"/>
               </svg>
               <div>
+                <span class="chip">Ongoing</span>
                 <h3 id="access-streets">Curb ramps and crossings</h3>
                 <p>Request ramps and accessible signals through 311.</p>
                 <a class="read-more" href="https://nola.gov/next/public-works/programs/accessibility-of-streets-and-sidewalks/" aria-describedby="access-streets">Read more</a>
@@ -198,6 +202,7 @@
                 <circle cx="15" cy="33.5" r="2" fill="#f0a032"/><circle cx="24" cy="36.5" r="2" fill="#f0a032"/><circle cx="32" cy="37.2" r="2.4" fill="#f0a032"/><circle cx="40" cy="36.5" r="2" fill="#f0a032"/><circle cx="49" cy="33.5" r="2" fill="#f0a032"/>
               </svg>
               <div>
+                <span class="chip">Each Carnival</span>
                 <h3 id="access-carnival">Parades at Gallier Hall</h3>
                 <p>An accessible grandstand for Carnival parades.</p>
                 <a class="read-more" href="https://wwltv.com/article/entertainment/events/mardi-gras/gallier-hall-viewing-space-for-disabled-people/289-f878f007-4b7d-462b-adb3-8936e22f9159" aria-describedby="access-carnival">Read more</a>
@@ -220,6 +225,7 @@
                 <circle cx="15" cy="20" r="3.2" fill="currentColor"/>
               </svg>
               <div>
+                <span class="chip"><time datetime="2024-05">May 2024</time></span>
                 <h3 id="access-stops">Stops without access</h3>
                 <p>Only 12 of 114 St. Charles stops were accessible in 2024.</p>
                 <a class="read-more" href="https://veritenews.org/2024/05/29/accessibility-grant-st-charles-streetcar/" aria-describedby="access-stops">Read more</a>
@@ -238,6 +244,7 @@
                 <circle cx="15" cy="20" r="3.2" fill="currentColor"/>
               </svg>
               <div>
+                <span class="chip"><time datetime="2023-11">Nov 2023</time></span>
                 <h3 id="access-ramps">Curb ramps behind schedule</h3>
                 <p>In 2023, about half the intersections in a ramp settlement met standards.</p>
                 <a class="read-more" href="https://veritenews.org/2023/11/20/settlement-city-curb-ramps-disabled-resident/" aria-describedby="access-ramps">Read more</a>
@@ -258,6 +265,7 @@
                 <circle cx="40" cy="50" r="3.8" fill="currentColor"/>
               </svg>
               <div>
+                <span class="chip"><time datetime="2026-01">Jan 2026</time></span>
                 <h3 id="access-paratransit">Late paratransit rides</h3>
                 <p>About 57% of rides were on time in late 2025, against an 85% goal.</p>
                 <a class="read-more" href="https://www.masstransitmag.com/bus/paratransit/news/55340758/la-new-orleans-promised-to-fix-its-paratransit-system-a-year-later-whats-changed" aria-describedby="access-paratransit">Read more</a>
@@ -279,6 +287,7 @@
                 <circle cx="46" cy="34" r="2.6" fill="currentColor"/>
               </svg>
               <div>
+                <span class="chip"><time datetime="2024-09">Sep 2024</time></span>
                 <h3 id="access-alerts">Storm alerts for Deaf residents</h3>
                 <p>Many warnings are still audio only, so Deaf volunteers share ASL updates.</p>
                 <a class="read-more" href="https://lailluminator.com/2024/09/12/deaf-disasters/" aria-describedby="access-alerts">Read more</a>
