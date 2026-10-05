@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Libre+Caslon+Text:wght@400;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="css/lab.css?v=2026-10-10">
+  <link rel="stylesheet" href="css/lab.css?v=2026-10-11">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -62,6 +62,12 @@
 
   <main id="main" class="wrap">
 
+    <!-- ==================== TOP OF PAGE ====================
+         Two columns on wide screens: intro, news, and Join on the left,
+         Access in New Orleans on the right. One column, in source
+         order (intro, access, news, join), on smaller screens. -->
+    <div class="top">
+
     <!-- ==================== INTRO ==================== -->
     <section id="top" class="hero">
       <div class="text">
@@ -69,34 +75,75 @@
         <p class="lede">Our lab studies and designs human–AI systems that make communication, information, and public services accessible.</p>
         <p class="sub">Projects span sign language and captioning technologies, reading supports, accessible data visualizations, and civic AI chatbots. They center the experiences of people with disabilities and their communities.</p>
       </div>
-
-      <!-- French Quarter gas lamp -->
-      <svg class="lamp" viewBox="0 0 120 205" aria-hidden="true">
-        <defs>
-          <radialGradient id="glow"><stop offset="0" stop-color="#f6c45a" stop-opacity=".55"/><stop offset="1" stop-color="#f6c45a" stop-opacity="0"/></radialGradient>
-        </defs>
-        <circle cx="70" cy="96" r="58" fill="url(#glow)"/>
-        <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 14 H72"/>
-          <path d="M6 8 V20"/>
-          <path d="M12 14 C12 44 46 44 46 26 C46 18 36 18 36 26"/>
-          <path d="M72 14 V30"/>
-          <path d="M48 60 L92 60 L84 130 L56 130 Z" fill="#fdf0cf"/>
-          <path d="M70 60 V130"/>
-        </g>
-        <path d="M70 32 L98 60 L42 60 Z" fill="currentColor"/>
-        <circle cx="70" cy="29" r="3.5" fill="currentColor"/>
-        <path d="M70 84 C62 96 64 110 70 112 C76 110 78 96 70 84 Z" fill="#f0a032"/>
-        <path d="M54 130 H86 L79 143 H61 Z" fill="currentColor"/>
-        <path d="M70 143 V158" stroke="currentColor" stroke-width="3"/>
-        <circle cx="70" cy="162" r="4" fill="currentColor"/>
-      </svg>
     </section>
+
+      <!-- ==================== ACCESS IN NEW ORLEANS ====================
+           Short notes on accessibility around the city, each with a link out.
+           Keep descriptions to one or two sentences. -->
+      <aside class="access" aria-labelledby="access-title">
+        <div class="access-head">
+          <div class="sign small">
+            <div class="tab" aria-hidden="true">
+              <svg width="16" height="14" viewBox="0 0 16 14"><path d="M15 13 C15 4 3 2 3 8 C3 11 7 11 7 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>Around town</span>
+              <svg width="16" height="14" viewBox="0 0 16 14"><path d="M1 13 C1 4 13 2 13 8 C13 11 9 11 9 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h2 id="access-title">Access in New Orleans</h2>
+          </div>
+
+          <!-- French Quarter gas lamp -->
+          <svg class="lamp" viewBox="0 0 120 205" aria-hidden="true">
+            <defs>
+              <radialGradient id="glow"><stop offset="0" stop-color="#f6c45a" stop-opacity=".55"/><stop offset="1" stop-color="#f6c45a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <circle cx="70" cy="96" r="58" fill="url(#glow)"/>
+            <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 14 H72"/>
+              <path d="M6 8 V20"/>
+              <path d="M12 14 C12 44 46 44 46 26 C46 18 36 18 36 26"/>
+              <path d="M72 14 V30"/>
+              <path d="M48 60 L92 60 L84 130 L56 130 Z" fill="#fdf0cf"/>
+              <path d="M70 60 V130"/>
+            </g>
+            <path d="M70 32 L98 60 L42 60 Z" fill="currentColor"/>
+            <circle cx="70" cy="29" r="3.5" fill="currentColor"/>
+            <path d="M70 84 C62 96 64 110 70 112 C76 110 78 96 70 84 Z" fill="#f0a032"/>
+            <path d="M54 130 H86 L79 143 H61 Z" fill="currentColor"/>
+            <path d="M70 143 V158" stroke="currentColor" stroke-width="3"/>
+            <circle cx="70" cy="162" r="4" fill="currentColor"/>
+          </svg>
+        </div>
+        <ul class="access-list">
+          <li>
+            <span class="chip">Music</span>
+            <h3 id="access-jazzfest">ASL at Jazz Fest</h3>
+            <p>Teams of ASL interpreters sign sets on several Jazz Fest stages, long coordinated by Tulane linguist Denise Crochet.</p>
+            <a class="read-more" href="https://news.tulane.edu/news/tulane-professor-helps-deaf-guests-feel-beat-jazz-fest" aria-describedby="access-jazzfest">Read more</a>
+          </li>
+          <li>
+            <span class="chip">Transit</span>
+            <h3 id="access-streetcar">Streetcars with lifts</h3>
+            <p>Since 2020, cars with wheelchair lifts run on the historic St. Charles line, stopping at rebuilt platforms with tactile warning strips.</p>
+            <a class="read-more" href="https://www.fox8live.com/2020/12/01/new-ada-streetcars-enter-service-st-charles-avenue/" aria-describedby="access-streetcar">Read more</a>
+          </li>
+          <li>
+            <span class="chip">Streets</span>
+            <h3 id="access-streets">Curb ramps and crossings</h3>
+            <p>Residents can request curb ramps, sidewalk repairs, and accessible pedestrian signals through 311, and the City tracks them on a public dashboard.</p>
+            <a class="read-more" href="https://nola.gov/next/public-works/programs/accessibility-of-streets-and-sidewalks/" aria-describedby="access-streets">Read more</a>
+          </li>
+          <li>
+            <span class="chip">Carnival</span>
+            <h3 id="access-carnival">Parade viewing at Gallier Hall</h3>
+            <p>During Carnival, the City sets up an accessible grandstand across from Gallier Hall for people with disabilities.</p>
+            <a class="read-more" href="https://wwltv.com/article/entertainment/events/mardi-gras/gallier-hall-viewing-space-for-disabled-people/289-f878f007-4b7d-462b-adb3-8936e22f9159" aria-describedby="access-carnival">Read more</a>
+          </li>
+        </ul>
+      </aside>
 
     <!-- ==================== NEWS + JOIN ====================
          Keep the three newest items in the top list. Move older ones
          into "Earlier news". Dates use the chip style: Mon YYYY. -->
-    <div class="news-join">
       <section id="news" class="news" aria-labelledby="news-title">
         <div class="sign small">
           <div class="tab" aria-hidden="true">
@@ -149,7 +196,7 @@
           <a href="https://forms.gle/d6URN19gETqWpEZf9">Undergraduate interest form</a>
         </div>
       </section>
-    </div>
+    </div><!-- /.top -->
 
     <!-- ==================== PROJECTS ====================
          Each project: paper count chip, title, research areas,
@@ -574,7 +621,7 @@
     <div class="wrap">
       <span>NOLA Accessibility Lab · Tulane University</span>
       <span>Paul Hall 309, New Orleans, LA · <a href="mailto:saadhassan@tulane.edu">saadhassan@tulane.edu</a></span>
-      <span class="credit">Design inspired by<br>New Orleans sidewalk street tiles, French Quarter street signs, gas lamps, balcony ironwork, and Crescent City water meter covers.</span>
+      <span class="credit">Design inspired by<br>New Orleans sidewalk street tiles, French Quarter street signs, gas lamps, balcony ironwork, curb-ramp warning strips, and Crescent City water meter covers.</span>
       <span class="credit"><a href="archive/">Archived site</a></span>
     </div>
   </footer>
