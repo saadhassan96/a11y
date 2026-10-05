@@ -218,17 +218,30 @@ img { max-width: 100%; }
 .lamp { flex: 0 0 auto; width: 70px; height: auto; margin: 0 6px -6px 0; color: var(--accent); }
 
 /* The card's top edge is a curb-ramp warning strip: rows of raised domes */
-.access-list {
-  list-style: none; margin: 0; padding: 0 22px;
-  background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
-  position: relative; overflow: hidden;
+.access-card {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
 }
-.access-list::before {
-  content: ""; display: block; height: 14px; margin: 0 -22px;
+.access-card::before {
+  content: ""; display: block; height: 14px;
   background-color: var(--tile);
   background-image: radial-gradient(circle, var(--proj-border) 2.4px, transparent 3px);
   background-size: 10px 10px; background-position: 0 2px;
 }
+.access-list { list-style: none; margin: 0; padding: 0 22px; overflow: hidden; }
+
+/* Progress / Barriers switch (JS only; without JS both lists show) */
+.access-switch { display: none; gap: 8px; padding: 16px 22px 4px; }
+.js .access-switch { display: flex; }
+.access-switch button {
+  font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+  padding: 7px 16px; border-radius: 999px;
+  color: var(--accent); background: var(--card); border: 1.5px solid var(--accent);
+}
+.access-switch button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #ffffff; }
+.js .access-list[hidden] { display: none; }
+/* Before js/lab.js runs, show only Progress */
+.js .access:not(.ready) .access-list[data-view="barriers"] { display: none; }
+
 .access-list li {
   display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: start; gap: 0 16px;
   padding: 16px 0; border-bottom: 1px solid var(--rule);
@@ -254,7 +267,7 @@ img { max-width: 100%; }
 /* Medium windows: the access notes sit in two columns when there is room */
 @media (max-width: 959px) {
   .access-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); column-gap: 32px; }
-  .access-list::before { grid-column: 1 / -1; }
+  .access-list[hidden] { display: none; }
 }
 
 /* ---------- Street-sign headings ---------- */

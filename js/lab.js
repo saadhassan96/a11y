@@ -45,6 +45,24 @@
     });
   }
 
+  /* ---------- Access in New Orleans: Progress / Barriers switch ---------- */
+  var accessButtons = Array.prototype.slice.call(document.querySelectorAll('.access-switch button'));
+  function showAccess(btn) {
+    accessButtons.forEach(function (b) {
+      var on = b === btn;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      var list = document.getElementById(b.getAttribute('aria-controls'));
+      if (list) list.hidden = !on;
+    });
+  }
+  if (accessButtons.length) {
+    showAccess(accessButtons[0]);
+    document.querySelector('.access').classList.add('ready');
+    accessButtons.forEach(function (b) {
+      b.addEventListener('click', function () { showAccess(b); });
+    });
+  }
+
   /* ---------- Highlight the current section in the nav as you scroll ---------- */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.site-nav ul a[href^="#"]'))
     .filter(function (a) { return !a.classList.contains('nav-join'); });
