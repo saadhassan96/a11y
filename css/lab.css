@@ -351,6 +351,7 @@ img { max-width: 100%; }
   letter-spacing: .08em; text-transform: uppercase;
 }
 .alumni p { margin: 0; font-size: 15px; }
+.alumni a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
 
 /* ---------- Footer ---------- */
 .railing { display: block; width: 100%; height: 40px; margin-top: 88px; color: var(--rail); }
