@@ -205,9 +205,9 @@ img { max-width: 100%; }
 }
 .hero .sub { margin: 0; max-width: 720px; color: var(--muted); font-size: clamp(17px, 1.6vw, 19px); }
 
-/* Medium and small windows: one column, intro, access, news, join */
+/* Medium and small windows: one column, intro, news, join, access */
 @media (max-width: 959px) {
-  .top { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "intro" "access" "news" "join"; gap: 40px; }
+  .top { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "intro" "news" "join" "access"; gap: 40px; }
   .hero { padding-top: 0; }
 }
 

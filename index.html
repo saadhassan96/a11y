@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Libre+Caslon+Text:wght@400;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="css/lab.css?v=2026-10-14">
+  <link rel="stylesheet" href="css/lab.css?v=2026-10-15">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -65,7 +65,7 @@
     <!-- ==================== TOP OF PAGE ====================
          Two columns on wide screens: intro, news, and Join on the left,
          Access in New Orleans on the right. One column, in source
-         order (intro, access, news, join), on smaller screens. -->
+         order (intro, news, join, access), on smaller screens. -->
     <div class="top">
 
     <!-- ==================== INTRO ==================== -->
@@ -76,6 +76,62 @@
         <p class="sub">Projects span sign language and captioning technologies, reading supports, accessible data visualizations, and civic AI chatbots. They center the experiences of people with disabilities and their communities.</p>
       </div>
     </section>
+
+    <!-- ==================== NEWS + JOIN ====================
+         Keep the three newest items in the top list. Move older ones
+         into "Earlier news". Dates use the chip style: Mon YYYY. -->
+      <section id="news" class="news" aria-labelledby="news-title">
+        <div class="sign small">
+          <div class="tab" aria-hidden="true">
+            <svg width="16" height="14" viewBox="0 0 16 14"><path d="M15 13 C15 4 3 2 3 8 C3 11 7 11 7 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Lab</span>
+            <svg width="16" height="14" viewBox="0 0 16 14"><path d="M1 13 C1 4 13 2 13 8 C13 11 9 11 9 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h2 id="news-title">News</h2>
+        </div>
+        <ul>
+          <li><span class="chip">Jul 2026</span><p>Saad Hassan received a $899,868 collaborative <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2619509">NSF award</a>, as PI, to design civic AI that connects residents, communities, and local governments.</p></li>
+          <li><span class="chip">Jun 2026</span><p>Two papers and a demo accepted to <a href="https://assets26.sigaccess.org/">ASSETS 2026</a>, including an ASL video comprehension tool led by <a href="https://chaelin0722.github.io/introduction/">Chaelin Kim</a>.</p></li>
+          <li><span class="chip">Apr 2026</span><p>A paper on ASL educators’ perspectives on AI was accepted to <a href="https://chi2026.acm.org/">CHI 2026</a> in Barcelona.</p></li>
+        </ul>
+        <details class="news-more">
+          <summary>Earlier news</summary>
+          <ul>
+            <li><span class="chip">Jan 2026</span><p>Lab alum <a href="https://www.linkedin.com/in/nikhil-modayur">Nikhil Modayur</a> received an Honorable Mention for the <a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/">2026 CRA Outstanding Undergraduate Researcher Award</a>.</p></li>
+            <li><span class="chip">Oct 2025</span><p>The lab presented one paper on reading support technologies and two demos at ASSETS 2025 in Denver.</p></li>
+            <li><span class="chip">Aug 2025</span><p>Two demos led by <a href="https://chaelin0722.github.io/introduction/">Chaelin Kim</a> and <a href="https://tithi-khan.github.io/">Nazmun Nahar Khanom</a>, on text simplification and an ASL learning tool for emergency medical providers, were accepted to ASSETS 2025.</p></li>
+            <li><span class="chip">Jun 2025</span><p>A review of 25 years of reading support research, with <a href="https://oliveralonzo.com/">Oliver Alonzo</a>, was accepted to ASSETS 2025 and nominated for Best Paper.</p></li>
+            <li><span class="chip">Jun 2025</span><p>A workshop on participant recruitment in accessibility research was accepted to ASSETS 2025.</p></li>
+            <li><span class="chip">Apr 2025</span><p><a href="https://matybohacek.com/">Matyas Bohacek</a> presented the lab’s <a href="https://dl.acm.org/doi/10.1145/3744257.3744258">AI-driven video-based ASL dictionary</a> at W4A 2025 in Sydney.</p></li>
+            <li><span class="chip">Apr 2025</span><p><a href="https://tithi-khan.github.io/">Nazmun Nahar Khanom</a> presented a demo of AI-based reading support tools at the Tulane Research, Innovation, and Creativity Summit (TRICS).</p></li>
+            <li><span class="chip">Mar 2025</span><p><a href="https://www.cs.cmu.edu/~bam/">Brad Myers</a> visited the lab to talk about his book <i>Pick, Click, Flick!: The Story of Interaction Techniques</i>.</p></li>
+            <li><span class="chip">Feb 2025</span><p>FSboard, an ASL fingerspelling dataset built with Google Research and DPAN, was accepted to CVPR 2025.</p></li>
+            <li><span class="chip">Jan 2025</span><p>A paper on multimodal affective captioning with haptics was accepted to CHI 2025 in Yokohama.</p></li>
+            <li><span class="chip">Jan 2025</span><p>Saad Hassan is Co-PI on an <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2515250">NSF IUCRC planning grant</a> to establish Tulane’s partner site for the <a href="https://nsfahead.org/">AHeAD Center</a>.</p></li>
+            <li><span class="chip">Jan 2025</span><p><a href="https://www.linkedin.com/in/aaron-gershkovich-46232a2b3/">Aaron Gershkovich</a> received an Honorable Mention for the 2024–2025 CRA Outstanding Undergraduate Researcher Award.</p></li>
+            <li><span class="chip">Nov 2024</span><p>A journal article on video-span selection for ASL learners was published in ACM TACCESS.</p></li>
+            <li><span class="chip">Oct 2024</span><p>The lab presented two posters at ASSETS 2024, on a rich closed-captioning format and on design sprints with neurodivergent scholars.</p></li>
+            <li><span class="chip">Oct 2024</span><p>The lab co-organized the <a href="https://tulanecs.github.io/PACE/">PACE workshop</a> on participatory AI for community engagement at HCOMP 2024 in Pittsburgh.</p></li>
+            <li><span class="chip">Aug 2024</span><p><a href="https://chaelin0722.github.io/introduction/">Chaelin Kim</a>, <a href="https://tithi-khan.github.io/">Nazmun Nahar Khanom</a>, and <a href="https://syedamahnoorasad.github.io/">Syeda Mah Noor Asad</a> joined the lab as PhD students.</p></li>
+            <li><span class="chip">May 2024</span><p>Two CHI 2024 papers, on affective captions and a dance video comprehension tool, received Best Paper Honorable Mentions.</p></li>
+            <li><span class="chip">Apr 2024</span><p>A $102,281 <a href="https://www.laregents.edu/wp-content/uploads/2024/04/7.-RSI-Committee-April-24-2024.pdf">Louisiana Board of Regents award</a>, with Saad Hassan as PI, will support AI-powered tools for ASL learning.</p></li>
+            <li><span class="chip">Dec 2023</span><p><a href="https://www.linkedin.com/in/aaron-gershkovich-46232a2b3/">Aaron Gershkovich</a> won the Best Prototype award at the Annual Undergraduate Poster Session.</p></li>
+            <li><span class="chip">Dec 2023</span><p>PopSign ASL, a sign language dataset collected through a smartphone game, was presented at NeurIPS 2023 in New Orleans.</p></li>
+            <li><span class="chip">Sep 2023</span><p>Tap to Sign, on American Sign Language text entry for smartphones, was accepted to MobileHCI 2023.</p></li>
+            <li><span class="chip">Aug 2023</span><p>Saad Hassan joined Tulane University as an Assistant Professor of Computer Science.</p></li>
+          </ul>
+          <button type="button" class="news-less">Show less news</button>
+        </details>
+      </section>
+
+      <section id="join" class="join" aria-labelledby="join-title">
+        <h2 id="join-title">Join the lab</h2>
+        <p>Tulane CS PhD applications for Fall 2027 are open (no application fee). Tulane undergraduates are welcome too.</p>
+        <div class="buttons">
+          <a class="primary" href="https://forms.gle/j4yXNgyCFjxgXfc16">PhD interest form</a>
+          <a href="https://forms.gle/d6URN19gETqWpEZf9">Undergraduate interest form</a>
+        </div>
+      </section>
 
       <!-- ==================== ACCESS IN NEW ORLEANS ====================
            Short notes on accessibility around the city in two lists,
@@ -296,62 +352,6 @@
           </ul>
         </div>
       </aside>
-
-    <!-- ==================== NEWS + JOIN ====================
-         Keep the three newest items in the top list. Move older ones
-         into "Earlier news". Dates use the chip style: Mon YYYY. -->
-      <section id="news" class="news" aria-labelledby="news-title">
-        <div class="sign small">
-          <div class="tab" aria-hidden="true">
-            <svg width="16" height="14" viewBox="0 0 16 14"><path d="M15 13 C15 4 3 2 3 8 C3 11 7 11 7 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-            <span>Lab</span>
-            <svg width="16" height="14" viewBox="0 0 16 14"><path d="M1 13 C1 4 13 2 13 8 C13 11 9 11 9 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-          </div>
-          <h2 id="news-title">News</h2>
-        </div>
-        <ul>
-          <li><span class="chip">Jul 2026</span><p>Saad Hassan received a $899,868 collaborative <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2619509">NSF award</a>, as PI, to design civic AI that connects residents, communities, and local governments.</p></li>
-          <li><span class="chip">Jun 2026</span><p>Two papers and a demo accepted to <a href="https://assets26.sigaccess.org/">ASSETS 2026</a>, including an ASL video comprehension tool led by <a href="https://chaelin0722.github.io/introduction/">Chaelin Kim</a>.</p></li>
-          <li><span class="chip">Apr 2026</span><p>A paper on ASL educators’ perspectives on AI was accepted to <a href="https://chi2026.acm.org/">CHI 2026</a> in Barcelona.</p></li>
-        </ul>
-        <details class="news-more">
-          <summary>Earlier news</summary>
-          <ul>
-            <li><span class="chip">Jan 2026</span><p>Lab alum <a href="https://www.linkedin.com/in/nikhil-modayur">Nikhil Modayur</a> received an Honorable Mention for the <a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/">2026 CRA Outstanding Undergraduate Researcher Award</a>.</p></li>
-            <li><span class="chip">Oct 2025</span><p>The lab presented one paper on reading support technologies and two demos at ASSETS 2025 in Denver.</p></li>
-            <li><span class="chip">Aug 2025</span><p>Two demos led by <a href="https://chaelin0722.github.io/introduction/">Chaelin Kim</a> and <a href="https://tithi-khan.github.io/">Nazmun Nahar Khanom</a>, on text simplification and an ASL learning tool for emergency medical providers, were accepted to ASSETS 2025.</p></li>
-            <li><span class="chip">Jun 2025</span><p>A review of 25 years of reading support research, with <a href="https://oliveralonzo.com/">Oliver Alonzo</a>, was accepted to ASSETS 2025 and nominated for Best Paper.</p></li>
-            <li><span class="chip">Jun 2025</span><p>A workshop on participant recruitment in accessibility research was accepted to ASSETS 2025.</p></li>
-            <li><span class="chip">Apr 2025</span><p><a href="https://matybohacek.com/">Matyas Bohacek</a> presented the lab’s <a href="https://dl.acm.org/doi/10.1145/3744257.3744258">AI-driven video-based ASL dictionary</a> at W4A 2025 in Sydney.</p></li>
-            <li><span class="chip">Apr 2025</span><p><a href="https://tithi-khan.github.io/">Nazmun Nahar Khanom</a> presented a demo of AI-based reading support tools at the Tulane Research, Innovation, and Creativity Summit (TRICS).</p></li>
-            <li><span class="chip">Mar 2025</span><p><a href="https://www.cs.cmu.edu/~bam/">Brad Myers</a> visited the lab to talk about his book <i>Pick, Click, Flick!: The Story of Interaction Techniques</i>.</p></li>
-            <li><span class="chip">Feb 2025</span><p>FSboard, an ASL fingerspelling dataset built with Google Research and DPAN, was accepted to CVPR 2025.</p></li>
-            <li><span class="chip">Jan 2025</span><p>A paper on multimodal affective captioning with haptics was accepted to CHI 2025 in Yokohama.</p></li>
-            <li><span class="chip">Jan 2025</span><p>Saad Hassan is Co-PI on an <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2515250">NSF IUCRC planning grant</a> to establish Tulane’s partner site for the <a href="https://nsfahead.org/">AHeAD Center</a>.</p></li>
-            <li><span class="chip">Jan 2025</span><p><a href="https://www.linkedin.com/in/aaron-gershkovich-46232a2b3/">Aaron Gershkovich</a> received an Honorable Mention for the 2024–2025 CRA Outstanding Undergraduate Researcher Award.</p></li>
-            <li><span class="chip">Nov 2024</span><p>A journal article on video-span selection for ASL learners was published in ACM TACCESS.</p></li>
-            <li><span class="chip">Oct 2024</span><p>The lab presented two posters at ASSETS 2024, on a rich closed-captioning format and on design sprints with neurodivergent scholars.</p></li>
-            <li><span class="chip">Oct 2024</span><p>The lab co-organized the <a href="https://tulanecs.github.io/PACE/">PACE workshop</a> on participatory AI for community engagement at HCOMP 2024 in Pittsburgh.</p></li>
-            <li><span class="chip">Aug 2024</span><p><a href="https://chaelin0722.github.io/introduction/">Chaelin Kim</a>, <a href="https://tithi-khan.github.io/">Nazmun Nahar Khanom</a>, and <a href="https://syedamahnoorasad.github.io/">Syeda Mah Noor Asad</a> joined the lab as PhD students.</p></li>
-            <li><span class="chip">May 2024</span><p>Two CHI 2024 papers, on affective captions and a dance video comprehension tool, received Best Paper Honorable Mentions.</p></li>
-            <li><span class="chip">Apr 2024</span><p>A $102,281 <a href="https://www.laregents.edu/wp-content/uploads/2024/04/7.-RSI-Committee-April-24-2024.pdf">Louisiana Board of Regents award</a>, with Saad Hassan as PI, will support AI-powered tools for ASL learning.</p></li>
-            <li><span class="chip">Dec 2023</span><p><a href="https://www.linkedin.com/in/aaron-gershkovich-46232a2b3/">Aaron Gershkovich</a> won the Best Prototype award at the Annual Undergraduate Poster Session.</p></li>
-            <li><span class="chip">Dec 2023</span><p>PopSign ASL, a sign language dataset collected through a smartphone game, was presented at NeurIPS 2023 in New Orleans.</p></li>
-            <li><span class="chip">Sep 2023</span><p>Tap to Sign, on American Sign Language text entry for smartphones, was accepted to MobileHCI 2023.</p></li>
-            <li><span class="chip">Aug 2023</span><p>Saad Hassan joined Tulane University as an Assistant Professor of Computer Science.</p></li>
-          </ul>
-          <button type="button" class="news-less">Show less news</button>
-        </details>
-      </section>
-
-      <section id="join" class="join" aria-labelledby="join-title">
-        <h2 id="join-title">Join the lab</h2>
-        <p>Tulane CS PhD applications for Fall 2027 are open (no application fee). Tulane undergraduates are welcome too.</p>
-        <div class="buttons">
-          <a class="primary" href="https://forms.gle/j4yXNgyCFjxgXfc16">PhD interest form</a>
-          <a href="https://forms.gle/d6URN19gETqWpEZf9">Undergraduate interest form</a>
-        </div>
-      </section>
     </div><!-- /.top -->
 
     <!-- ==================== PROJECTS ====================
