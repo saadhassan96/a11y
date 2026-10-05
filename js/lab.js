@@ -30,6 +30,36 @@
     }
   }
 
+  /* ---------- Highlight the current section in the nav as you scroll ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.site-nav ul a[href^="#"]'))
+    .filter(function (a) { return !a.classList.contains('nav-join'); });
+  var spySections = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  var ticking = false;
+
+  function updateSpy() {
+    ticking = false;
+    var navBar = document.querySelector('.site-nav');
+    /* A section becomes current once its top passes 30% down the window */
+    var offset = Math.max((navBar ? navBar.offsetHeight : 0) + 40, window.innerHeight * 0.3);
+    var current = -1;
+    spySections.forEach(function (sec, i) {
+      if (sec && sec.getBoundingClientRect().top <= offset) current = i;
+    });
+    /* At the very bottom, the last section is current even if it is short */
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = spySections.length - 1;
+    }
+    navLinks.forEach(function (a, i) {
+      if (i === current) a.setAttribute('aria-current', 'location');
+      else a.removeAttribute('aria-current');
+    });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(updateSpy); }
+  }, { passive: true });
+  window.addEventListener('resize', updateSpy);
+  updateSpy();
+
   /* ---------- Publications: project filters and show all / fewer ----------
      "Highlights" shows highlighted papers, plus all of them after
      "Show all". A project filter shows every paper in that project. */

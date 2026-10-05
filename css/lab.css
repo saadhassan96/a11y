@@ -162,14 +162,19 @@ img { max-width: 100%; }
 }
 .site-nav ul a { display: block; padding: 10px 14px; color: var(--ink); text-decoration: none; }
 .site-nav ul a:hover { color: var(--accent); }
-.site-nav ul a.nav-join {
-  margin-left: 6px; background: var(--navy); color: #ffffff;
+/* Current section, set by js/lab.js as you scroll: a sidewalk tile */
+.site-nav ul a[aria-current="location"] {
+  background: var(--tile); color: var(--tile-ink); border-radius: 3px; font-weight: 600;
+}
+.site-nav .nav-actions { display: flex; align-items: center; gap: 6px; }
+.site-nav a.nav-join {
+  display: block; text-decoration: none; background: var(--navy); color: #ffffff;
   border-radius: 999px; padding: 10px 16px; font-weight: 600;
 }
 
 /* Theme switch: a Crescent City water meter cover */
 .theme-toggle {
-  width: 44px; height: 44px; padding: 0; margin-left: 6px;
+  width: 44px; height: 44px; padding: 0;
   border: 0; border-radius: 50%; background: transparent; cursor: pointer;
 }
 .theme-toggle svg { display: block; }
@@ -216,7 +221,6 @@ img { max-width: 100%; }
 .sign.small { margin-bottom: 12px; }
 .sign.small h2 { font-size: 24px; padding: 8px 26px; }
 
-section { scroll-margin-top: 84px; }
 .block { padding-top: 80px; }
 .section-head {
   display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
@@ -255,7 +259,7 @@ section { scroll-margin-top: 84px; }
 
 /* ---------- Cards ---------- */
 .grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 22px;
 }
 
 .project {
@@ -340,7 +344,7 @@ section { scroll-margin-top: 84px; }
   font-family: var(--font-tile); font-weight: 700; font-size: 22px;
   letter-spacing: .06em; text-transform: uppercase;
 }
-.alumni { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px 32px; }
+.alumni { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 20px 32px; }
 .alumni h4 {
   margin: 0 0 4px; color: var(--muted);
   font-family: var(--font-tile); font-size: 14px; font-weight: 700;
@@ -361,7 +365,31 @@ section { scroll-margin-top: 84px; }
 
 /* ---------- Small screens ---------- */
 @media (max-width: 700px) {
-  .site-nav { position: static; }     /* don't pin a two-row nav on phones */
-  .site-nav ul { margin-left: -14px; }
+  /* Keep the nav pinned on phones too, but compact: wordmark on one row,
+     links in a single row that scrolls sideways if it runs out of room */
+  html { scroll-padding-top: 116px; }
+  .site-nav .wrap {
+    display: grid; grid-template-columns: 1fr auto; gap: 6px 8px;
+    padding-top: 8px; padding-bottom: 6px;
+  }
+  .site-nav ul {
+    grid-column: 1 / -1; grid-row: 2;
+    flex-wrap: nowrap; overflow-x: auto; min-width: 0; margin: 0 0 0 -10px; scrollbar-width: none;
+  }
+  .site-nav ul::-webkit-scrollbar { display: none; }
+  .site-nav ul li { flex: 0 0 auto; }
+  .site-nav ul a { padding: 8px 10px; }
+  .site-nav a.nav-join { padding: 8px 14px; }
+  .tiles.small { flex-wrap: nowrap; gap: 6px; padding: 3px; }
+  .tiles.small .word { gap: 2px; }
+  .tiles.small .word span { width: 17px; height: 23px; font-size: 15px; }
+  .theme-toggle { width: 40px; height: 40px; }
+  .theme-toggle svg { width: 40px; height: 40px; }
   .lamp { display: none; }
+}
+@media (max-width: 380px) {
+  .tiles.small { gap: 5px; }
+  .tiles.small .word { gap: 1px; }
+  .tiles.small .word span { width: 13px; height: 19px; font-size: 12px; }
+  .site-nav a.nav-join { padding: 8px 12px; }
 }
