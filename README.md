@@ -17,8 +17,11 @@ archive/          the previous Hugo site (2024 to October 2026), served at /arch
 - **News:** add a `<li>` at the top of the News list. Keep three items there and
   move the oldest into "Earlier news".
 - **Publications:** add an `<a class="pub">` card in date order. Add `highlight`
-  to its class to show it before "Show all" is pressed. Put lab members in `<b>`.
-- **Projects:** update the paper count chip on each project card when you add a paper.
+  to its class to show it under "Highlights". Add `data-project="comm"`,
+  `"info"`, or `"civic"` so it shows under that project's filter. Put lab
+  members in `<b>`.
+- **Projects:** the "See N publications" link on each card counts papers by
+  `data-project` and opens the Publications section with that filter applied.
 - **People:** copy a `.person` block and add a photo to `images/people/`.
   Move people who graduate to the Alumni lists.
 

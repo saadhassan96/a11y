@@ -65,14 +65,7 @@
     <!-- ==================== INTRO ==================== -->
     <section id="top" class="hero">
       <div class="text">
-        <h1>
-          <span class="sr-only">NOLA A11y Lab</span>
-          <span class="tiles" aria-hidden="true">
-            <span class="word"><span>N</span><span>O</span><span>L</span><span>A</span></span>
-            <span class="word"><span>A</span><span>1</span><span>1</span><span>Y</span></span>
-            <span class="word"><span>L</span><span>A</span><span>B</span></span>
-          </span>
-        </h1>
+        <h1 class="sr-only">NOLA A11y Lab</h1>
         <p class="lede">The NOLA Accessibility Lab at Tulane University studies and designs human–AI systems that make communication, information, and public services accessible.</p>
         <p class="sub">Projects span sign language and captioning technologies, reading supports, accessible data, and civic AI. Each one centers the experiences of people with disabilities and their communities.</p>
       </div>
@@ -149,10 +142,10 @@
 
       <section id="join" class="join" aria-labelledby="join-title">
         <h2 id="join-title">Join the lab</h2>
-        <p>Tulane CS PhD applications for Fall 2027 are open, with no application fee. Tulane undergraduates are welcome too.</p>
+        <p>Tulane CS PhD applications for Fall 2027 are open (no application fee). Tulane undergraduates are welcome too.</p>
         <div class="buttons">
-          <a class="primary" href="https://forms.gle/j4yXNgyCFjxgXfc16">PhD form</a>
-          <a href="https://forms.gle/d6URN19gETqWpEZf9">Undergraduate form</a>
+          <a class="primary" href="https://forms.gle/j4yXNgyCFjxgXfc16">PhD interest form</a>
+          <a href="https://forms.gle/d6URN19gETqWpEZf9">Undergraduate interest form</a>
         </div>
       </section>
     </div>
@@ -171,32 +164,39 @@
       </div>
       <div class="grid">
         <article class="project">
-          <span class="chip">14 publications</span>
           <h3>Communication Accessibility</h3>
           <ul class="areas" aria-label="Research areas"><li>Sign language</li><li>Captions</li></ul>
           <p>AI-powered tools that help people learn, look up, and understand American Sign Language, and richer captions that convey emotion and non-speech information for d/Deaf and hard-of-hearing viewers.</p>
-          <a class="funding" href="https://www.laregents.edu/wp-content/uploads/2024/04/7.-RSI-Committee-April-24-2024.pdf">Funded by LA Board of Regents</a>
+          <div class="card-links">
+            <a class="see-pubs" href="#publications" data-filter="comm">See 14 publications</a>
+            <a class="funding" href="https://www.laregents.edu/wp-content/uploads/2024/04/7.-RSI-Committee-April-24-2024.pdf">Funded by LA Board of Regents</a>
+          </div>
         </article>
         <article class="project">
-          <span class="chip">4 publications</span>
           <h3>Information Access</h3>
           <ul class="areas" aria-label="Research areas"><li>Reading support</li><li>Data visualization</li></ul>
           <p>Reading supports such as customizable text simplification, and accessible data visualizations, including personal health information, that help people understand and act on what they read.</p>
-          <a class="funding" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2515250">Funded by NSF IUCRC</a>
+          <div class="card-links">
+            <a class="see-pubs" href="#publications" data-filter="info">See 4 publications</a>
+            <span class="funding">Funded by Lavin-Bernick Grant</span>
+          </div>
         </article>
         <article class="project">
-          <span class="chip">2 publications</span>
           <h3>Civic AI</h3>
           <ul class="areas" aria-label="Research areas"><li>Access</li><li>Broader context</li></ul>
           <p>Participatory approaches to AI that make public services accessible and connect residents, communities, and local governments, along with the broader social context of AI in public life.</p>
-          <a class="funding" href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2619509">Funded by NSF</a>
+          <div class="card-links">
+            <a class="see-pubs" href="#publications" data-filter="civic">See 2 publications</a>
+            <a class="funding" href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2619509">Funded by NSF</a>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- ==================== PUBLICATIONS ====================
          Newest first. Add class="pub highlight" to show a paper before
-         "Show all" is pressed. Lab members go in <b>. Venue chip format:
+         "Show all" is pressed. data-project ties a paper to a project
+         filter: comm, info, or civic (leave it out if none). Lab members go in <b>. Venue chip format:
          "VENUE YEAR" or "VENUE YEAR · Type" (Demo, Poster, Journal...). -->
     <section id="publications" class="block" aria-labelledby="publications-title">
       <div class="section-head">
@@ -211,39 +211,48 @@
         <p class="note">Lab members in <b>bold</b></p>
       </div>
 
+      <!-- Project filters (shown only when JS is on) -->
+      <div class="filters" role="group" aria-label="Filter publications by project" hidden>
+        <button type="button" data-filter="all" aria-pressed="true">Highlights</button>
+        <button type="button" data-filter="comm" aria-pressed="false">Communication Accessibility</button>
+        <button type="button" data-filter="info" aria-pressed="false">Information Access</button>
+        <button type="button" data-filter="civic" aria-pressed="false">Civic AI</button>
+      </div>
+      <p id="pub-status" class="sr-only" aria-live="polite"></p>
+
       <div id="pub-list" class="grid pubs">
         <!-- 2026 -->
-        <a class="pub highlight" href="https://dl.acm.org/doi/10.1145/3772318.3791928">
+        <a class="pub highlight" data-project="comm" href="https://dl.acm.org/doi/10.1145/3772318.3791928">
           <div class="meta"><span class="chip">CHI 2026</span></div>
           <h3>ASL Educators’ Perspectives on AI for Enhancing Student Learning in American Sign Language Education</h3>
           <p class="authors"><b>Saad Hassan</b>, Laleh Nourian, Caluã de Lacerda Pataca, Michelle M. Olson, Toni D’Aurio, Kanupriya Agarwal, <b>Syeda Mah Noor Asad</b>, Garreth W. Tigwell, Matt Huenerfauth</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub highlight" href="https://saadh.info/papers/kim-assets26/kim-assets26.pdf">
+        <a class="pub highlight" data-project="comm" href="https://saadh.info/papers/kim-assets26/kim-assets26.pdf">
           <div class="meta"><span class="chip">ASSETS 2026</span></div>
           <h3>Design and Evaluation of an AI-Based American Sign Language Video Comprehension Tool: Exploring the Benefits and Use of Automatic Segmentation and Sign Lookup</h3>
           <p class="authors"><b>Chaelin Kim</b>, Denise Crochet, Maty Bohacek, <b>Saad Hassan</b></p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub highlight" href="https://saadh.info/papers/hassan-assets26/hassan-assets26.pdf">
+        <a class="pub highlight" data-project="info" href="https://saadh.info/papers/hassan-assets26/hassan-assets26.pdf">
           <div class="meta"><span class="chip">ASSETS 2026</span></div>
           <h3>A Scoping Review of Human–Computer Interaction Research on the Accessibility of Data Visualizations: New Technologies, Procedures, and Designs</h3>
           <p class="authors"><b>Saad Hassan</b>, Areen Khalaila, Dylan Cashman, Ather Sharif, Rebecca Faust</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://saadh.info/papers/kim-assets26-2/kim-assets26-demo.pdf">
+        <a class="pub" data-project="comm" href="https://saadh.info/papers/kim-assets26-2/kim-assets26-demo.pdf">
           <div class="meta"><span class="chip">ASSETS 2026 · Demo</span></div>
           <h3>Supporting Sign Language Video Comprehension through In-Situ Automatic Segmentation and Sign Lookup Tool</h3>
           <p class="authors"><b>Chaelin Kim</b>, <b>Saad Hassan</b></p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://books.google.com/books/about/De_Gruyter_Handbook_of_Disruptive_Urban.html?id=xc8O0gEACAAJ">
+        <a class="pub" data-project="civic" href="https://books.google.com/books/about/De_Gruyter_Handbook_of_Disruptive_Urban.html?id=xc8O0gEACAAJ">
           <div class="meta"><span class="chip">De Gruyter 2026 · Book Chapter</span></div>
           <h3>AI in the Public Sphere: Citizen Engagement and Governance</h3>
           <p class="authors"><b>Saad Hassan</b>, Motahhare Eslami, Nicholas Mattei, Aron Culotta, John Zimmerman</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://www.sciencedirect.com/science/article/pii/S2666667726003879">
+        <a class="pub" data-project="info" href="https://www.sciencedirect.com/science/article/pii/S2666667726003879">
           <div class="meta"><span class="chip">AJPC 2026 · Commentary</span></div>
           <h3>Reducing hypertension disparities: The potential role of patient-facing large language models</h3>
           <p class="authors">Farah Allouch, <b>Saad Hassan</b>, Flor Alvarado, <b>Syeda Mah Noor Asad</b>, Dee Parekh, Renata Johnson, Marilyn Payne, David Gardner, Nicholas Mattei, Keith C. Ferdinand</p>
@@ -251,19 +260,19 @@
         </a>
 
         <!-- 2025 -->
-        <a class="pub highlight" href="https://dl.acm.org/doi/10.1145/3663547.3746355">
+        <a class="pub highlight" data-project="info" href="https://dl.acm.org/doi/10.1145/3663547.3746355">
           <div class="meta"><span class="chip">ASSETS 2025</span><span class="award">Best Paper Nominee</span></div>
           <h3>A Review of 25 Years of Human-Computer Interaction Research on Reading Support Technologies for People with Disabilities Published in ACM</h3>
           <p class="authors">Oliver Alonzo*, <b>Saad Hassan*</b></p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3663547.3759713">
+        <a class="pub" data-project="info" href="https://dl.acm.org/doi/10.1145/3663547.3759713">
           <div class="meta"><span class="chip">ASSETS 2025 · Demo</span></div>
           <h3>A Customizable AI-Powered Automatic Text Simplification Tool for Supporting In-Situ Text Comprehension</h3>
           <p class="authors"><b>Nazmun Nahar Khanom</b>, <b>Aaron Gershkovich</b>, Oliver Alonzo, <b>Saad Hassan</b></p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3663547.3759746">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3663547.3759746">
           <div class="meta"><span class="chip">ASSETS 2025 · Demo</span></div>
           <h3>Signing for Care: A Demo and Initial Evaluation of an American Sign Language Learning Tool for Emergency Medical Service Providers</h3>
           <p class="authors"><b>Chaelin Kim</b>, <b>Cameron McLaren</b>, <b>Madhangi Krishnan</b>, <b>Nikhil Modayur</b>, <b>Saad Hassan</b></p>
@@ -275,19 +284,19 @@
           <p class="authors">Lloyd May, <b>Saad Hassan</b>, Khang Dang, Sooyeon Lee, Oliver Alonzo</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub highlight" href="https://openaccess.thecvf.com/content/CVPR2025/html/Georg_FSboard_Over_3_Million_Characters_of_ASL_Fingerspelling_Collected_via_CVPR_2025_paper.html">
+        <a class="pub highlight" data-project="comm" href="https://openaccess.thecvf.com/content/CVPR2025/html/Georg_FSboard_Over_3_Million_Characters_of_ASL_Fingerspelling_Collected_via_CVPR_2025_paper.html">
           <div class="meta"><span class="chip">CVPR 2025</span></div>
           <h3>FSboard: Over 3 Million Characters of ASL Fingerspelling Collected via Smartphones</h3>
           <p class="authors">Manfred Georg, Garrett Tanzer, Esha Uboweja, <b>Saad Hassan</b>, Maximus Shengelia, Sam Sepah, Sean Forbes, Thad Starner</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3744257.3744258">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3744257.3744258">
           <div class="meta"><span class="chip">W4A 2025</span></div>
           <h3>Towards an AI-Driven Video-Based American Sign Language Dictionary: Exploring Design and Usage Experience with Learners</h3>
           <p class="authors"><b>Saad Hassan</b>, Matyas Bohacek, <b>Chaelin Kim</b>, Denise Crochet</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3706598.3713304">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3706598.3713304">
           <div class="meta"><span class="chip">CHI 2025</span></div>
           <h3>Tactile Emotions: Multimodal Affective Captioning with Haptics Improves Narrative Engagement for d/Deaf and Hard-of-Hearing Viewers</h3>
           <p class="authors">Caluã de Lacerda Pataca, <b>Saad Hassan</b>, Lloyd May, Michelle M. Olson, Toni D’Aurio, Roshan L. Peiris, Matt Huenerfauth</p>
@@ -295,19 +304,19 @@
         </a>
 
         <!-- 2024 -->
-        <a class="pub highlight" href="https://dl.acm.org/doi/10.1145/3613904.3642258">
+        <a class="pub highlight" data-project="comm" href="https://dl.acm.org/doi/10.1145/3613904.3642258">
           <div class="meta"><span class="chip">CHI 2024</span><span class="award">Honorable Mention</span></div>
           <h3>Caption Royale: Exploring the Design Space of Affective Captions from the Perspective of Deaf and Hard-of-Hearing Individuals</h3>
           <p class="authors">Caluã de Lacerda Pataca, <b>Saad Hassan</b>, Nathan Tinker, Roshan Lalintha Peiris, Matt Huenerfauth</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3613904.3642710">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3613904.3642710">
           <div class="meta"><span class="chip">CHI 2024</span><span class="award">Honorable Mention</span></div>
           <h3>Designing and Evaluating an Advanced Dance Video Comprehension Tool with In-situ Move Identification Capabilities</h3>
           <p class="authors"><b>Saad Hassan</b>, Caluã de Lacerda Pataca, Laleh Nourian, Garreth W. Tigwell, Briana Davis, <b>Will Zhenya Silver Wagman</b></p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3663548.3688504">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3663548.3688504">
           <div class="meta"><span class="chip">ASSETS 2024 · Demo</span></div>
           <h3>Towards a Rich Format for Closed-Captioning</h3>
           <p class="authors">Lloyd May, Alex Williams, <b>Saad Hassan</b>, Mark Cartwright, Sooyeon Lee</p>
@@ -319,13 +328,13 @@
           <p class="authors">LouAnne Boyd, Annuska Zolyomi, <b>Saad Hassan</b>, Seray B. Ibrahim, Guande Wu, Kay Kender</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3690647">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3690647">
           <div class="meta"><span class="chip">TACCESS 2024 · Journal</span></div>
           <h3>Exploring the Benefits and Applications of Video-Span Selection and Search for Real-Time Support in Sign Language Video Comprehension among ASL Learners</h3>
           <p class="authors"><b>Saad Hassan</b>, Caluã de Lacerda Pataca, Akhter Al Amin, Laleh Nourian, Diego Navarro, Sooyeon Lee, Alexis Gordon, Matthew Watkins, Garreth W. Tigwell, Matt Huenerfauth</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://ojs.aaai.org/index.php/HCOMP/article/view/31610">
+        <a class="pub" data-project="civic" href="https://ojs.aaai.org/index.php/HCOMP/article/view/31610">
           <div class="meta"><span class="chip">HCOMP 2024 · Workshop</span></div>
           <h3>PACE: Participatory AI for Community Engagement</h3>
           <p class="authors"><b>Saad Hassan</b>, <b>Syeda Mah Noor Asad</b>, Motahhare Eslami, Nicholas Mattei, Aron Culotta, John Zimmerman</p>
@@ -333,19 +342,19 @@
         </a>
 
         <!-- 2023 -->
-        <a class="pub" href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/00dada608b8db212ea7d9d92b24c68de-Abstract-Datasets_and_Benchmarks.html">
+        <a class="pub" data-project="comm" href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/00dada608b8db212ea7d9d92b24c68de-Abstract-Datasets_and_Benchmarks.html">
           <div class="meta"><span class="chip">NeurIPS 2023 · Datasets</span></div>
           <h3>PopSign ASL v1.0: An Isolated American Sign Language Dataset Collected via Smartphones</h3>
           <p class="authors">Thad Starner, Sean Forbes, Matthew So, … <b>Saad Hassan</b>, … Garrett Tanzer</p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3597638.3614497">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3597638.3614497">
           <div class="meta"><span class="chip">ASSETS 2023 · Demo</span></div>
           <h3>Sign Spotter: Design and Initial Evaluation of an Automatic Video-Based American Sign Language Dictionary System</h3>
           <p class="authors">Matyas Bohacek, <b>Saad Hassan</b></p>
           <span class="more">View publication</span>
         </a>
-        <a class="pub" href="https://dl.acm.org/doi/10.1145/3604274">
+        <a class="pub" data-project="comm" href="https://dl.acm.org/doi/10.1145/3604274">
           <div class="meta"><span class="chip">MobileHCI 2023</span></div>
           <h3>Tap to Sign: Towards using American Sign Language for Text Entry on Smartphones</h3>
           <p class="authors"><b>Saad Hassan</b>, Abraham Glasser, Max Shengelia, Thad Starner, Sean Forbes, Nathan Qualls, Sam S. Sepah</p>
@@ -442,8 +451,9 @@
   <footer class="site-footer">
     <div class="wrap">
       <span>NOLA Accessibility Lab · Department of Computer Science · Tulane University</span>
-      <span>Stanley Thomas Hall 303, New Orleans, LA · <a href="mailto:saadhassan@tulane.edu">saadhassan@tulane.edu</a></span>
-      <span class="credit">Design inspired by New Orleans sidewalk street tiles, French Quarter street signs, gas lamps, balcony ironwork, and Crescent City water meter covers. <a href="archive/">Archived site</a></span>
+      <span>Paul Hall 309, New Orleans, LA · <a href="mailto:saadhassan@tulane.edu">saadhassan@tulane.edu</a></span>
+      <span class="credit">Design inspired by<br>New Orleans sidewalk street tiles, French Quarter street signs, gas lamps, balcony ironwork, and Crescent City water meter covers.</span>
+      <span class="credit"><a href="archive/">Archived site</a></span>
     </div>
   </footer>
 

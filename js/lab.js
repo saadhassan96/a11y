@@ -30,21 +30,66 @@
     }
   }
 
-  /* ---------- Show all / show fewer publications ---------- */
+  /* ---------- Publications: project filters and show all / fewer ----------
+     "Highlights" shows highlighted papers, plus all of them after
+     "Show all". A project filter shows every paper in that project. */
   var list = document.getElementById('pub-list');
   var more = document.getElementById('pub-toggle');
+  var filterBar = document.querySelector('.filters');
+  var status = document.getElementById('pub-status');
 
-  if (list && more) {
-    var total = list.querySelectorAll('.pub').length;
-    var showAll = 'Show all ' + total + ' publications';
-    more.textContent = showAll;
-    more.hidden = false;
+  if (list && more && filterBar) {
+    var pubs = Array.prototype.slice.call(list.querySelectorAll('.pub'));
+    var buttons = Array.prototype.slice.call(filterBar.querySelectorAll('button'));
+    var state = { filter: 'all', expanded: false };
+    var showAll = 'Show all ' + pubs.length + ' publications';
+
+    function inProject(pub, f) { return pub.getAttribute('data-project') === f; }
+
+    function render() {
+      var shown = 0;
+      pubs.forEach(function (pub) {
+        var show = state.filter === 'all'
+          ? (state.expanded || pub.classList.contains('highlight'))
+          : inProject(pub, state.filter);
+        pub.classList.toggle('is-hidden', !show);
+        if (show) shown++;
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-filter') === state.filter ? 'true' : 'false');
+      });
+      more.hidden = state.filter !== 'all';
+      more.setAttribute('aria-expanded', state.expanded ? 'true' : 'false');
+      more.textContent = state.expanded ? 'Show fewer publications' : showAll;
+      if (status) status.textContent = 'Showing ' + shown + ' publications';
+    }
+
+    function setFilter(f) {
+      state.filter = f;
+      state.expanded = false;
+      render();
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setFilter(b.getAttribute('data-filter')); });
+    });
 
     more.addEventListener('click', function () {
-      var open = list.classList.toggle('expanded');
-      more.setAttribute('aria-expanded', open ? 'true' : 'false');
-      more.textContent = open ? 'Show fewer publications' : showAll;
-      if (!open) document.getElementById('publications').scrollIntoView();
+      state.expanded = !state.expanded;
+      render();
+      if (!state.expanded) document.getElementById('publications').scrollIntoView();
     });
+
+    /* "See N publications" links on project cards: count, then filter */
+    Array.prototype.forEach.call(document.querySelectorAll('.see-pubs'), function (link) {
+      var f = link.getAttribute('data-filter');
+      var n = pubs.filter(function (p) { return inProject(p, f); }).length;
+      link.textContent = 'See ' + n + (n === 1 ? ' publication' : ' publications');
+      link.addEventListener('click', function () { setFilter(f); });
+    });
+
+    filterBar.hidden = false;
+    list.classList.add('ready');
+    render();
   }
 })();
