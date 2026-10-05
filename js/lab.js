@@ -30,6 +30,21 @@
     }
   }
 
+  /* ---------- Earlier news: "Show less" closes it and returns to News ---------- */
+  var newsMore = document.querySelector('.news-more');
+  var newsLess = document.querySelector('.news-less');
+  if (newsMore && newsLess) {
+    var summary = newsMore.querySelector('summary');
+    newsLess.addEventListener('click', function () {
+      newsMore.open = false;
+      document.getElementById('news').scrollIntoView();
+      summary.focus();
+    });
+    newsMore.addEventListener('toggle', function () {
+      summary.textContent = newsMore.open ? 'Hide earlier news' : 'Earlier news';
+    });
+  }
+
   /* ---------- Highlight the current section in the nav as you scroll ---------- */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.site-nav ul a[href^="#"]'))
     .filter(function (a) { return !a.classList.contains('nav-join'); });

@@ -241,6 +241,13 @@ img { max-width: 100%; }
 .news li p { flex: 1 1 360px; min-width: 0; margin: 0; }
 .news details { margin-top: 12px; }
 .news summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 15px; padding: 6px 0; }
+.news details[open] > summary { margin-bottom: 4px; }
+.news-less {
+  margin-top: 12px; padding: 8px 16px; cursor: pointer;
+  font: inherit; font-size: 15px; font-weight: 600;
+  color: var(--accent); background: transparent;
+  border: 1.5px solid var(--accent); border-radius: 999px;
+}
 
 .join {
   flex: 1 1 300px; min-width: 0; margin-top: 8px;
