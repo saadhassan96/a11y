@@ -318,6 +318,11 @@ img { max-width: 100%; }
 .pub .links a { color: var(--accent); text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .pub .authors { margin: 0; color: var(--muted); font-size: 15px; }
 .pub .authors b { color: var(--ink); }
+.pub .authors a {
+  color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+.pub .authors a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .pub .more {
   margin-top: auto; padding-top: 6px; color: var(--accent);
   font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px;
