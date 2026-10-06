@@ -2,7 +2,7 @@
 
 Website of the NOLA Accessibility Lab at Tulane University.
 
-- Live site: https://saadhassan96.github.io/a11y/
+- Live site: https://saadh.info/a11y/ or https://saadhassan96.github.io/a11y/ 
 - Archived site (2024 to October 2026): https://saadhassan96.github.io/a11y/archive/
 - Saad Hassan: https://saadh.info
 
