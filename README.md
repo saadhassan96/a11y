@@ -22,7 +22,9 @@ archive/          the previous Hugo site (2024 to October 2026), served at /arch
   members in `<b>`.
 - **Projects:** the "See N publications" link on each card counts papers by
   `data-project` and opens the Publications section with that filter applied.
-- **Access in New Orleans:** the panel beside the intro, with two lists that the
+- **Access in New Orleans:** the panel beside the intro on wide screens, and
+  the last thing on the page on phones and smaller windows. In the HTML it is
+  the last child of `<main>`, after People. It has two lists that the
   Progress / Barriers buttons switch between. Each `<li>` has a
   small line drawing (inline SVG on a sidewalk tile), a title with an `id`, one
   short sentence, and a "Read more" link whose `aria-describedby` points to
