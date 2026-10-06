@@ -1,44 +1,30 @@
-# NOLA A11y Lab website
+# NOLA Accessibility Lab website
 
-The lab site is one plain HTML page with no build step, in the same spirit as
-[saadh.info](https://saadh.info).
+Website of the NOLA Accessibility Lab at Tulane University.
+
+- Live site: https://saadhassan96.github.io/a11y/
+- Archived site (2024 to October 2026): https://saadhassan96.github.io/a11y/archive/
+- Saad Hassan: https://saadh.info
+
+## Run locally
+
+The site is plain HTML with no build step. Open `index.html` in a browser, or
+serve the folder so paths behave as they do online:
 
 ```
-index.html        all content (news, projects, publications, people)
-css/lab.css       styles; colors and fonts are tokens at the top
-js/lab.js         light/dark switch and "Show all publications"
-images/people/    square photos, about 320px, firstname-lastname.jpg
-images/favicon.svg
-archive/          the previous Hugo site (2024 to October 2026), served at /archive/
+python3 -m http.server 8000
 ```
 
-## Updating
+Then visit http://localhost:8000.
 
-- **News:** add a `<li>` at the top of the News list. Keep three items there and
-  move the oldest into "Earlier news".
-- **Publications:** add an `<a class="pub">` card in date order. Add `highlight`
-  to its class to show it under "Highlights". Add `data-project="comm"`,
-  `"info"`, or `"civic"` so it shows under that project's filter. Put lab
-  members in `<b>`.
-- **Projects:** the "See N publications" link on each card counts papers by
-  `data-project` and opens the Publications section with that filter applied.
-- **Access in New Orleans:** the panel beside the intro on wide screens, and
-  the last thing on the page on phones and smaller windows. In the HTML it is
-  the last child of `<main>`, after People. It has two lists that the
-  Progress / Barriers buttons switch between. Each `<li>` has a
-  small line drawing (inline SVG on a sidewalk tile), a title with an `id`, one
-  short sentence, and a "Read more" link whose `aria-describedby` points to
-  that title.
-- **People:** copy a `.person` block and add a photo to `images/people/`.
-  Move people who graduate to the Alumni lists.
+To preview the archived Hugo site, install Hugo 0.119 (extended) and run
+`hugo server --source archive`.
 
-Preview locally by opening `index.html` in a browser.
+Pushing to `main` runs `.github/workflows/gh-pages.yaml`, which builds the
+archive into `/archive/` and publishes both with GitHub Pages.
 
-## Deploying
+## License
 
-Pushing to `main` runs `.github/workflows/gh-pages.yaml`. It builds the archived
-Hugo site into `/archive/` and publishes it with the current site to GitHub Pages.
-
-Design inspired by New Orleans sidewalk street tiles, French Quarter street signs,
-gas lamps, balcony ironwork, curb-ramp warning strips, and Crescent City water
-meter covers.
+Code is under the MIT License. Written content and photos are copyright
+Saad Hassan and the NOLA Accessibility Lab, all rights reserved. See
+[LICENSE](LICENSE).
